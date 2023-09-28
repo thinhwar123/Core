@@ -37,7 +37,7 @@ public sealed class ComboAreaAttribute : Attribute
 }
 
 #if UNITY_EDITOR
-public sealed class ChapterMapAttributeDrawer : OdinAttributeDrawer<ComboAreaAttribute, ComboArea>
+public sealed class ComboAreaAttributeDrawer : OdinAttributeDrawer<ComboAreaAttribute, ComboArea>
 {
     private enum Tile
     {
@@ -83,7 +83,7 @@ public sealed class ChapterMapAttributeDrawer : OdinAttributeDrawer<ComboAreaAtt
     protected override void DrawPropertyLayout(GUIContent label)
     {
         Rect rect = EditorGUILayout.GetControlRect();
-        EditorGUI.LabelField(rect.AlignLeft(rect.width - 100 - 4), "Chapter Map");
+        EditorGUI.LabelField(rect.AlignLeft(rect.width - 100 - 4), "Combo Area");
 
         LoadCurrentCase();
         this.ValueEntry.WeakValues.ForceMarkDirty();
