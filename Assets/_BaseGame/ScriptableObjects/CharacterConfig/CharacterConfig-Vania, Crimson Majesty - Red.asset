@@ -18,7 +18,8 @@ MonoBehaviour:
   <NickName>k__BackingField: Crimson Majesty
   <CharacterStar>k__BackingField: 3
   <CharacterAttribute>k__BackingField: 0
-  <CharacterModel>k__BackingField: {fileID: 0}
+  <CharacterModel>k__BackingField: {fileID: 3150303019051342704, guid: 24707eafa0e33e9438af29debfe58e75,
+    type: 3}
   <CharacterIcon>k__BackingField: {fileID: 21300000, guid: 55b80967a9d360249931e66075862406,
     type: 3}
   <Profile>k__BackingField: I'm the heir apparent to the queen? What does that even
