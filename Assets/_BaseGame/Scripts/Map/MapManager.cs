@@ -65,11 +65,11 @@ namespace BaseGame
             for (int i = 0; i < mapAssetData.listMapDataModel.Count; i++)
             {
                 var dataModel = mapAssetData.listMapDataModel[i];
-                MapDBModel researchDBModel = new MapDBModel();
-                researchDBModel.id = dataModel.mapID;
-                researchDBModel.treeFloor = dataModel.mapTree;
-                researchDBModel.isUnlock = false;
-                listMapDBModel.listMapDBModel.Add(researchDBModel);
+                MapDBModel mapDBModel = new MapDBModel();
+                mapDBModel.id = dataModel.mapID;
+                mapDBModel.treeFloor = dataModel.mapTree;
+                mapDBModel.isUnlock = false;
+                listMapDBModel.listMapDBModel.Add(mapDBModel);
             }
         }
 
