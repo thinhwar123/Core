@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589308f5bbab3604fa5f11aeaa05cfba, type: 3}
+  m_Name: EnemeyConfig-xEnemy_7-Flame Pig
+  m_EditorClassIdentifier: 
+  <EnemyPreview>k__BackingField: {fileID: 0}
+  <EnemyId>k__BackingField: 7
+  <EnemyName>k__BackingField: xEnemy_7
+  <EnemyNickName>k__BackingField: Flame Pig
+  <EnemyModel>k__BackingField: {fileID: 5922361146543061785, guid: 8addf8930331aab49bdd2255f7443845,
+    type: 3}
+  <EnemyIcon>k__BackingField: {fileID: 0}
+  <Profile>k__BackingField: 
+  <AttackDamage>k__BackingField: 40
+  <HitPoint>k__BackingField: 350
+  <MoveStep>k__BackingField: 2
+  <SkillConfig>k__BackingField: {fileID: 11400000, guid: a66ba0d3052b9374094436d0278bbe42,
+    type: 2}

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589308f5bbab3604fa5f11aeaa05cfba, type: 3}
+  m_Name: EnemeyConfig-xEnemy_2-Plant Chewer
+  m_EditorClassIdentifier: 
+  <EnemyPreview>k__BackingField: {fileID: 0}
+  <EnemyId>k__BackingField: 2
+  <EnemyName>k__BackingField: xEnemy_2
+  <EnemyNickName>k__BackingField: Plant Chewer
+  <EnemyModel>k__BackingField: {fileID: 7574769881199358202, guid: 92949ee5579b7db41a53bf25c1bbd302,
+    type: 3}
+  <EnemyIcon>k__BackingField: {fileID: 0}
+  <Profile>k__BackingField: 
+  <AttackDamage>k__BackingField: 40
+  <HitPoint>k__BackingField: 251
+  <MoveStep>k__BackingField: 1
+  <SkillConfig>k__BackingField: {fileID: 11400000, guid: 9e01f432c6b19af47b3d7441363a9bb0,
+    type: 2}

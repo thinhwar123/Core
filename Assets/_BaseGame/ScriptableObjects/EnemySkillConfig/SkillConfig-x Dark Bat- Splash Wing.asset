@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829492576af445c49a02979f58487847, type: 3}
+  m_Name: SkillConfig-x Dark Bat- Splash Wing
+  m_EditorClassIdentifier: 
+  <Skillicon>k__BackingField: {fileID: 21300000, guid: d3c9b9147ef20124cb0412907d6b15df,
+    type: 3}
+  <EnemyName>k__BackingField: x Dark Bat
+  <SkillName>k__BackingField: Splash Wing
+  <SkillRange>k__BackingField: 1
+  <ComboCooldown>k__BackingField: 3
+  <ComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,
+    type: 2}
+  skillEffect: {fileID: 0}
