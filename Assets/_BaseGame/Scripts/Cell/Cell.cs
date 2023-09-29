@@ -24,6 +24,7 @@ public partial class Cell : AwaitableCachedMonoBehaviour
     [field: SerializeField] public int YPosition {get; private set;} // Row
     [field: SerializeField] public EAttribute CellAttribute {get; private set;}
     private Config CurrentConfig => CellConfigs.First(c => c.CellType == CellAttribute);
+    public bool IsCharacterCell => Owner != null && Owner is Character;
     public void SetupCell(EAttribute type, int xPos, int yPos)
     {
         CellAttribute = type;

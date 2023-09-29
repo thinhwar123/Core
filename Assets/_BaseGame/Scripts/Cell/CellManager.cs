@@ -17,12 +17,7 @@ public class CellManager : Singleton<CellManager>
     
     private Cell[,] Cells {get; set;}
 
-    private void Start()
-    {
-        CreateMap();
-    }
-
-    private void CreateMap()
+    public void CreateMap()
     {
         ClearDemoMap();
         Cells = new Cell[Column, Row];
@@ -50,7 +45,7 @@ public class CellManager : Singleton<CellManager>
     }
     
     
-    private Cell GetCell(int x, int y)
+    public Cell GetCell(int x, int y)
     {
         if (x < 0 || x >= Column || y < 0 || y >= Row) return null; 
         return Cells[x, y];

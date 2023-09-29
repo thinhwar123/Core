@@ -44,7 +44,7 @@ public partial class Character : CharacterIdleState.IIdleStateHandler
 
     public async UniTask OnIdleStateEnter(CancellationToken token)
     {
-        
+        CharacterModel.OnIdleStateEnter();
     }
 
     public async UniTask OnIdleStateExecute(CancellationToken token)
