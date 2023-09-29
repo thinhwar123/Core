@@ -11,25 +11,29 @@ public partial class Cell : AwaitableCachedMonoBehaviour
         Normal,
         Selected,
         UnSelect,
-        Hide
+        Focus,
+        Hide,
+        
     }
     [field: SerializeField] public Config[] CellConfigs {get; private set;}
     [field: SerializeField] public State CurrentState {get; private set;}
     [field: SerializeField] public GameObject LineSelect {get; private set;}
     [field: SerializeField] public GameObject LineUnSelect {get; private set;}
     [field: SerializeField] public Entity Owner {get; private set;}
-    [field: SerializeField] private int XPosition {get; set;}
-    [field: SerializeField] private int YPosition {get; set;}
-    [field: SerializeField] public EAttribute CellType {get; private set;}
-    private Config CurrentConfig => CellConfigs.First(c => c.CellType == CellType);
-    public void SetupCell(EAttribute type)
+    [field: SerializeField] public int XPosition {get; private set;} // Column
+    [field: SerializeField] public int YPosition {get; private set;} // Row
+    [field: SerializeField] public EAttribute CellAttribute {get; private set;}
+    private Config CurrentConfig => CellConfigs.First(c => c.CellType == CellAttribute);
+    public void SetupCell(EAttribute type, int xPos, int yPos)
     {
-        CellType = type;
+        CellAttribute = type;
+        XPosition = xPos;
+        YPosition = yPos;
         CurrentConfig.NormalCell.SetActive(true);
         CurrentConfig.SelectedCell.SetActive(false);
         CurrentConfig.UnSelectCell.SetActive(false);
         LineSelect.SetActive(false);
-        LineUnSelect.SetActive(false);
+        LineUnSelect.SetActive(true);
     }
     public void SetupSelect()
     {
@@ -38,6 +42,7 @@ public partial class Cell : AwaitableCachedMonoBehaviour
         CurrentConfig.NormalCell.SetActive(false);
         CurrentConfig.SelectedCell.SetActive(true);
         CurrentConfig.UnSelectCell.SetActive(false);
+        CurrentConfig.FocusCell.SetActive(false);
         LineSelect.SetActive(true);
         LineUnSelect.SetActive(false);
     }
@@ -48,6 +53,7 @@ public partial class Cell : AwaitableCachedMonoBehaviour
         CurrentConfig.NormalCell.SetActive(false);
         CurrentConfig.SelectedCell.SetActive(false);
         CurrentConfig.UnSelectCell.SetActive(true);
+        CurrentConfig.FocusCell.SetActive(false);
         LineSelect.SetActive(false);
         LineUnSelect.SetActive(true);
     }
@@ -58,6 +64,7 @@ public partial class Cell : AwaitableCachedMonoBehaviour
         CurrentConfig.NormalCell.SetActive(true);
         CurrentConfig.SelectedCell.SetActive(false);
         CurrentConfig.UnSelectCell.SetActive(false);
+        CurrentConfig.FocusCell.SetActive(false);
         LineSelect.SetActive(false);
         LineUnSelect.SetActive(true);
     }
@@ -67,8 +74,29 @@ public partial class Cell : AwaitableCachedMonoBehaviour
         CurrentConfig.NormalCell.SetActive(false);
         CurrentConfig.SelectedCell.SetActive(false);
         CurrentConfig.UnSelectCell.SetActive(false);
+        CurrentConfig.FocusCell.SetActive(false);
         LineSelect.SetActive(false);
         LineUnSelect.SetActive(false);
+    }
+    public void SetupFocus()
+    {
+        if (CurrentState == State.Hide) return;
+        CurrentState = State.Focus;
+        CurrentConfig.NormalCell.SetActive(false);
+        CurrentConfig.SelectedCell.SetActive(false);
+        CurrentConfig.UnSelectCell.SetActive(false);
+        CurrentConfig.FocusCell.SetActive(true);
+        LineSelect.SetActive(false);
+        LineUnSelect.SetActive(true);
+    }
+
+    public List<Cell> GetCellInSmallArea()
+    {
+        return CellManager.Instance.GetCell(EAreaType.SmallArea, XPosition, YPosition);
+    }
+    public bool IsCellInSmallArea(Cell cell)
+    {
+        return GetCellInSmallArea().Contains(cell);
     }
     public void RegisterOwner(Entity entity)
     {

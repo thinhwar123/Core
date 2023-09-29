@@ -12,6 +12,7 @@ public partial class Cell
         [field: SerializeField] public GameObject NormalCell {get; private set;}
         [field: SerializeField] public GameObject SelectedCell {get; private set;}
         [field: SerializeField] public GameObject UnSelectCell {get; private set;}
+        [field: SerializeField] public GameObject FocusCell {get; private set;}
     }
     
 }

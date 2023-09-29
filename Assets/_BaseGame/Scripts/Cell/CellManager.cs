@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using TW.Utility.DesignPattern;
 using UnityEngine;
 
@@ -11,21 +12,43 @@ public class CellManager : Singleton<CellManager>
     [field: SerializeField] public Cell CellPrefab {get; private set;}
     [field: SerializeField] public int Column {get; private set;}
     [field: SerializeField] public int Row {get; private set;}
+    [field: SerializeField] public int Stroke {get; private set;}
     [field: SerializeField] public List<Cell> CellList {get; private set;} = new List<Cell>();
-    private Cell[,] Cells {get; set;}
     
+    private Cell[,] Cells {get; set;}
+
+    private void Start()
+    {
+        CreateMap();
+    }
+
     private void CreateMap()
     {
+        ClearDemoMap();
         Cells = new Cell[Column, Row];
         for (int i = 0; i < Column; i++)
         {
             for (int j = 0; j < Row; j++)
             {
-                Cells[i, j] = Instantiate(CellPrefab, transform);
-                Cells[i, j].transform.localPosition = new Vector3(i, j, 0);
+                Cells[i, j] = Instantiate(CellPrefab, Transform);
+                Cells[i, j].transform.localPosition = new Vector3(i - Column/2f, 0, j - Row/2f);
+                Cells[i, j].SetupCell(Cell.GetRandomBasicType(), i, j);
+                
+                CellList.Add(Cells[i, j]);
+                if (i + j < Stroke || Column - i + j < Stroke + 1 || i + Row - j < Stroke + 1 || Column - i + Row - j < Stroke + 2)
+                {
+                    Cells[i, j].SetupHide();
+                }
             }
         }
     }
+
+    private void ClearMap()
+    {
+        CellList.ForEach(x => Destroy(x.gameObject));
+        CellList.Clear();
+    }
+    
     
     private Cell GetCell(int x, int y)
     {
@@ -130,11 +153,24 @@ public class CellManager : Singleton<CellManager>
         return result.Distinct().ToList();
     }
     
+    public void DeActiveAllOtherCell(EAttribute selectAttribute)
+    {
+        CellList.Where(x => x.CellAttribute != selectAttribute).ForEach(x => x.SetupUnSelect());
+    }
+    public void FocusAllCell(EAttribute selectAttribute)
+    {
+        CellList.Where(x => x.CellAttribute == selectAttribute).ForEach(x => x.SetupFocus());
+    }
+    public void NormalAllCell()
+    {
+        CellList.ForEach(x => x.SetupNormal());
+    }
+    
 #if UNITY_EDITOR
     [Button]
     private void InitDemoMap()
     {
-        ClearMap();
+        ClearDemoMap();
         Cells = new Cell[Column, Row];
         for (int i = 0; i < Column; i++)
         {
@@ -142,26 +178,15 @@ public class CellManager : Singleton<CellManager>
             {
                 Cells[i, j] = UnityEditor.PrefabUtility.InstantiatePrefab(CellPrefab, transform) as Cell;
                 Cells[i, j].transform.localPosition = new Vector3(i - Column/2f, 0, j - Row/2f);
-                Cells[i, j].SetupCell(Cell.GetRandomBasicType());
+                Cells[i, j].SetupCell(Cell.GetRandomBasicType(), i, j);
                 
                 CellList.Add(Cells[i, j]);
+                if (i + j < Stroke || Column - i + j < Stroke + 1 || i + Row - j < Stroke + 1 || Column - i + Row - j < Stroke + 2)
+                {
+                    Cells[i, j].SetupHide();
+                }
             }
         }
-        //Hide 3 cells in each of the 4 corners of the map
-        GetCell(0, 0).SetupHide();
-        GetCell(0, 1).SetupHide();
-        GetCell(1, 0).SetupHide();
-        GetCell(0, Row - 1).SetupHide();
-        GetCell(0, Row - 2).SetupHide();
-        GetCell(1, Row - 1).SetupHide();
-        GetCell(Column - 1, 0).SetupHide();
-        GetCell(Column - 2, 0).SetupHide();
-        GetCell(Column - 1, 1).SetupHide();
-        GetCell(Column - 1, Row - 1).SetupHide();
-        GetCell(Column - 2, Row - 1).SetupHide();
-        GetCell(Column - 1, Row - 2).SetupHide();
-        
-        
     }
     [Button]
     private void InitDemoMapAndActiveArea(EAreaType areaType)
@@ -173,7 +198,7 @@ public class CellManager : Singleton<CellManager>
     }
 
     [Button]
-    private void ClearMap()
+    private void ClearDemoMap()
     {
         CellList.ForEach(x => DestroyImmediate(x.gameObject));
         CellList.Clear();

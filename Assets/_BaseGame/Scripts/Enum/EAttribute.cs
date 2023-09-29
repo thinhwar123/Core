@@ -6,8 +6,14 @@ using UnityEngine;
 [GUIColor("@TW.Utility.Extension.AColorExtension.GetColorInPalette(\"Attribute\", (int)$value)")]
 public enum EAttribute 
 {
-    Red,
-    Green,
-    Blue,
-    Yellow,
+    
+    Red = 0,
+    Green = 1,
+    Blue = 2,
+    Yellow = 3,
+    
+    White = 4,
+    Grey = 5,
+    
+    Clear = 10,
 }
