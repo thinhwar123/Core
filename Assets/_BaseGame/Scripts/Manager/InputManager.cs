@@ -22,6 +22,7 @@ public class InputManager : Singleton<InputManager>
 
     private void HandleMouseInGameInput()
     {
+        if (GameManager.Instance.CurrentGameState != GameManager.GameState.PlayerTurn) return;
         if (IsPointerOverGameObject()) return;
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {

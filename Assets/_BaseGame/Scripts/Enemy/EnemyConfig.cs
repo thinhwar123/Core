@@ -31,7 +31,7 @@ public class EnemyConfig : ScriptableObject
 
     [field: ProgressBar(0, 250, 1, 0.1f, 0.1f)]
     [field: SerializeField] public int AttackDamage { get; private set; }
-    [field: ProgressBar(0, 500, 0.1f, 1f, 0.1f)]
+    [field: ProgressBar(0, 5000, 0.1f, 1f, 0.1f)]
     [field: SerializeField] public int HitPoint { get; private set; }
     [field: SerializeField] public int MoveStep { get; private set; }
     [field: SerializeField, InlineEditor] public EnemySkillConfig SkillConfig { get; private set; }

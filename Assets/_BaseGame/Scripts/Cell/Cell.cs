@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Sirenix.OdinInspector;
 using TW.Utility.CustomComponent;
 using UnityEngine;
 
@@ -13,7 +14,6 @@ public partial class Cell : AwaitableCachedMonoBehaviour
         UnSelect,
         Focus,
         Hide,
-        
     }
     [field: SerializeField] public Config[] CellConfigs {get; private set;}
     [field: SerializeField] public State CurrentState {get; private set;}
@@ -25,8 +25,12 @@ public partial class Cell : AwaitableCachedMonoBehaviour
     [field: SerializeField] public EAttribute CellAttribute {get; private set;}
     private Config CurrentConfig => CellConfigs.First(c => c.CellType == CellAttribute);
     public bool IsCharacterCell => Owner != null && Owner is Character;
+    [ShowInInspector]
+    public bool IsEnemyCell => Owner != null && Owner is Enemy;
+    public bool IsConsumed { get;set; }
     public void SetupCell(EAttribute type, int xPos, int yPos)
     {
+        IsConsumed = false;
         CellAttribute = type;
         XPosition = xPos;
         YPosition = yPos;
@@ -36,6 +40,7 @@ public partial class Cell : AwaitableCachedMonoBehaviour
         LineSelect.SetActive(false);
         LineUnSelect.SetActive(true);
     }
+    
     public void SetupSelect()
     {
         if (CurrentState == State.Hide) return;
@@ -90,14 +95,40 @@ public partial class Cell : AwaitableCachedMonoBehaviour
         LineSelect.SetActive(false);
         LineUnSelect.SetActive(true);
     }
-
-    public List<Cell> GetCellInSmallArea()
+    public void SetupConsume()
     {
-        return CellManager.Instance.GetCell(EAreaType.SmallArea, XPosition, YPosition);
+        if (CurrentState == State.Hide) return;
+        SetupHide();
+        IsConsumed = true;
+        CurrentState = State.Normal;
+        CellAttribute = EAttribute.Grey;
+        CurrentConfig.NormalCell.SetActive(true);
+        CurrentConfig.SelectedCell.SetActive(false);
+        CurrentConfig.UnSelectCell.SetActive(false);
+        LineSelect.SetActive(false);
+        LineUnSelect.SetActive(true);
+    }
+
+    public void RandomNewColor()
+    {
+        IsConsumed = false;
+        SetupHide();
+        CellAttribute = GetRandomBasicType();
+        CurrentState = State.Normal;
+        CurrentConfig.NormalCell.SetActive(true);
+        CurrentConfig.SelectedCell.SetActive(false);
+        CurrentConfig.UnSelectCell.SetActive(false);
+        LineSelect.SetActive(false);
+        LineUnSelect.SetActive(true);
+    }
+    
+    public List<Cell> GetCell(EAreaType areaType)
+    {
+        return CellManager.Instance.GetCell(areaType, this);
     }
     public bool IsCellInSmallArea(Cell cell)
     {
-        return GetCellInSmallArea().Contains(cell);
+        return GetCell(EAreaType.SmallArea).Contains(cell);
     }
     public void RegisterOwner(Entity entity)
     {

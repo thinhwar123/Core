@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
@@ -41,15 +42,14 @@ public partial class Character : CharacterMoveState.IMoveStateHandler
     
     public void OnMoveStateRequest()
     {
-        if (TeamIndex == 0) 
+        if (!IsLeader)
         {
-            CurrentCell.UnRegisterOwner();
+            SetHide(false);
         }
     }
 
     public async UniTask OnMoveStateEnter(CancellationToken token)
     {
-        CurrentMoveIndex = 0;
         CharacterModel.OnMoveStateEnter();
     }
 
@@ -57,11 +57,11 @@ public partial class Character : CharacterMoveState.IMoveStateHandler
     {
         if (CurrentMoveIndex >= CellPath.Count)
         {
-            if (TeamIndex == 0) 
+            if (IsLeader) 
             {
                 CurrentCell.RegisterOwner(this);
             }
-            StateMachine.RequestTransition(CharacterIdleState.Instance);
+            StateMachine.RequestTransition(CharacterComboState.Instance);
             return;
         }
         CurrentCell = CellPath[CurrentMoveIndex];
@@ -73,10 +73,20 @@ public partial class Character : CharacterMoveState.IMoveStateHandler
         {
             CurrentMoveIndex++;
         });
-        float rotateDuration = Vector3.Angle(Transform.forward, targetPosition - Transform.position) / RotateSpeed;
         RotateTween?.Kill();
-        RotateTween = Transform.DORotateQuaternion(Quaternion.LookRotation(targetPosition - Transform.position), rotateDuration).SetEase(Ease.Linear);
+        float rotateDuration = Vector3.Angle(Transform.forward, targetPosition - Transform.position) / RotateSpeed;
+        if (rotateDuration > 0.01f)
+        {
+            RotateTween = Transform.DORotateQuaternion(Quaternion.LookRotation(targetPosition - Transform.position), rotateDuration).SetEase(Ease.Linear);
+        }
         await UniTask.Delay((int) (moveDuration * 1000), cancellationToken: token);
+        CurrentCell.SetupConsume();
+        List<Cell> aroundCells = CurrentCell.GetCell(EAreaType.SmallCross);
+        if (aroundCells.Any(c => c.IsEnemyCell))
+        {
+            AroundEnemies = aroundCells.Where(c => c.IsEnemyCell).Select(c => c.Owner as Enemy).ToList();
+            StateMachine.RequestTransition(CharacterAttackState.Instance);
+        }
     }
 
     public async UniTask OnMoveStateExit(CancellationToken token)

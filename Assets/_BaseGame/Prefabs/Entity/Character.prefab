@@ -49,12 +49,14 @@ MonoBehaviour:
   <TeamIndex>k__BackingField: 0
   <CharacterModelContainer>k__BackingField: {fileID: 1432959027759498856}
   <MovementSpeed>k__BackingField: 5
-  <RotateSpeed>k__BackingField: 360
+  <RotateSpeed>k__BackingField: 540
+  <TargetEnemy>k__BackingField: {fileID: 0}
   <CurrentCell>k__BackingField: {fileID: 0}
   <CharacterModel>k__BackingField: {fileID: 0}
   <Animator>k__BackingField: {fileID: 0}
   <CurrentAnimation>k__BackingField: 
   <CellPath>k__BackingField: []
+  <AroundEnemies>k__BackingField: []
   <CurrentMoveIndex>k__BackingField: 0
 --- !u!1 &4353915832029323705
 GameObject:

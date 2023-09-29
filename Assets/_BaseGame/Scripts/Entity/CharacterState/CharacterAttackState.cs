@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using TW.Utility.DesignPattern;
 using UnityEngine;
 
@@ -40,21 +41,34 @@ public partial class Character : CharacterAttackState.IAttackStateHandler
 {
     public void OnAttackStateRequest()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public async UniTask OnAttackStateEnter(CancellationToken token)
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public async UniTask OnAttackStateExecute(CancellationToken token)
     {
-        throw new System.NotImplementedException();
+        for (int i = 0; i < AroundEnemies.Count; i++)
+        {
+            TargetEnemy = AroundEnemies[i];
+            
+            RotateTween?.Kill();
+            float rotateDuration = Vector3.Angle(Transform.forward, TargetEnemy.Transform.position - Transform.position) / RotateSpeed;
+            RotateTween = Transform.DORotateQuaternion(Quaternion.LookRotation(TargetEnemy.Transform.position - Transform.position), rotateDuration).SetEase(Ease.Linear);
+            await UniTask.Delay((int) (rotateDuration * 1000), cancellationToken: token);
+            CharacterModel.OnAttackStateEnter();
+            // wait for animation complete
+            float duration  = await GetAnimationDuration("attack", token);
+            await UniTask.Delay((int) (duration * 1000), cancellationToken: token);
+        }
+        StateMachine.RequestTransition(CharacterMoveState.Instance);
     }
-
+    
     public async UniTask OnAttackStateExit(CancellationToken token)
     {
-        throw new System.NotImplementedException();
+        
     }
 }
