@@ -15,6 +15,7 @@ public partial class Character : Entity
     [field: SerializeField] public Transform CharacterModelContainer {get; private set;}
     [field: SerializeField] public float MovementSpeed {get; private set;}
     [field: SerializeField] public float RotateSpeed {get; private set;}
+    [field: SerializeField] public Enemy TargetEnemy {get; private set;}
     [field: SerializeField,ReadOnly, FoldoutGroup("Debug")] public Cell CurrentCell {get; private set;}
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] private CharacterModel CharacterModel {get; set;}
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public Animator Animator {get; private set;}

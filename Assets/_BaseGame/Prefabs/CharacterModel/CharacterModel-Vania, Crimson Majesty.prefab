@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Animator>k__BackingField: {fileID: 7151033764456200199}
+  <EntityTriggerAction>k__BackingField: {fileID: 4769048534429428786}
 --- !u!1001 &7151033764463652451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,3 +128,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7151033764463652451}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7151033764463560971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 190312, guid: 4677fea271e7e1b4385abb777ec350c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 7151033764463652451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4769048534429428786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151033764463560971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4170188e38cc97145a9ccaa492d43793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,11 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CharacterModel : MonoBehaviour
 {
     [field: SerializeField] public Animator Animator { get; private set; }
-    
+    [field: SerializeField] public EntityTriggerAction EntityTriggerAction {get; private set;}
     public void OnIdleStateEnter()
     {
         Animator.Play("idle");
@@ -30,6 +32,12 @@ public class CharacterModel : MonoBehaviour
     public void OnActiveSkillStateEnter()
     {
         Animator.Play("active");
+    }
+
+    private void Reset()
+    {        
+        Animator = GetComponentInChildren<Animator>();
+        EntityTriggerAction = GetComponentInChildren<EntityTriggerAction>();
     }
 }
 
