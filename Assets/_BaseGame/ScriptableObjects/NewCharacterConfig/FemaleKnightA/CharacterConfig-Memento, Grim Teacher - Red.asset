@@ -32,7 +32,7 @@ MonoBehaviour:
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
       type: 2}
   - <ChainCount>k__BackingField: 8
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,
       type: 2}
   <SkillConfig>k__BackingField: {fileID: 11400000, guid: 93079b4370271504f8375a244a2bdcf8,
     type: 2}

@@ -34,7 +34,7 @@ MonoBehaviour:
   <AttackDamage>k__BackingField: 13
   <HitPoint>k__BackingField: 169
   <CharacterChainCombo>k__BackingField:
-  - <ChainCount>k__BackingField: 4
+  - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
       type: 2}
   - <ChainCount>k__BackingField: 8

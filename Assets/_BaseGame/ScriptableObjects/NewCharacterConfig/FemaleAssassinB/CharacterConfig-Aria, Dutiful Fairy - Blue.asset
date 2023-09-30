@@ -28,11 +28,11 @@ MonoBehaviour:
   <AttackDamage>k__BackingField: 21
   <HitPoint>k__BackingField: 139
   <CharacterChainCombo>k__BackingField:
-  - <ChainCount>k__BackingField: 4
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+  - <ChainCount>k__BackingField: 3
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,
       type: 2}
   - <ChainCount>k__BackingField: 8
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4b97506ecd953544bab2ca0ce9ddbfd2,
       type: 2}
   <SkillConfig>k__BackingField: {fileID: 11400000, guid: 7365171469dd4e14fb0951b7ebf07625,
     type: 2}
