@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using TW.UI.CustomComponent;
+using TW.Utility.CustomComponent;
 
 namespace BaseGame
 {
@@ -72,7 +74,7 @@ namespace BaseGame
             yield return new WaitForEndOfFrame();
             yield return new WaitForEndOfFrame();
             yield return new WaitForEndOfFrame();
-            while (PopupMapUI.Instance.isLoadingUI)
+            while (AUIManager.Instance.GetUI<PopupMapUI>().isLoadingUI)
             {
                 yield return new WaitForEndOfFrame();
             }
@@ -82,7 +84,7 @@ namespace BaseGame
             for (int i = 0; i < listSlotRequest.Count; i++)
             {
                 var slotRequest = listSlotRequest[i];
-                var slotRequestCell = PopupMapUI.Instance.GetMapCell(slotRequest.levelTree, slotRequest.levelID);
+                var slotRequestCell = AUIManager.Instance.GetUI<PopupMapUI>().GetMapCell(slotRequest.levelTree, slotRequest.levelID);
                 var line = Instantiate(slotRequestCell.mapLine, slotRequestCell.mapLine.transform.parent);
                 
                 if( Mathf.Abs(mapDataModel.mapTree - slotRequest.levelTree) >= 2)
@@ -103,7 +105,7 @@ namespace BaseGame
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
                 line.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 RectTransform lineRect = line.GetComponent<RectTransform>();
-                lineRect.sizeDelta = new Vector2(lineRect.sizeDelta.x, direction.magnitude);
+                lineRect.sizeDelta = new Vector2(lineRect.sizeDelta.x, direction.magnitude * 1.5f);
                 line.gameObject.SetActive(true);
             }
             mapDBModel.numbSlotUnlock = numbUnlock;
@@ -123,7 +125,7 @@ namespace BaseGame
         /// </summary>
         public void SelectMap()
         {
-            PopupMapUI.Instance.SelectMapCell(this);
+            AUIManager.Instance.GetUI<PopupMapUI>().SelectMapCell(this);
         }
 
         /// <summary>
@@ -166,7 +168,7 @@ namespace BaseGame
             for (int i = 0; i < listSlotRequest.Count; i++)
             {
                 var slotRequest = listSlotRequest[i];
-                var slotRequestCell = PopupMapUI.Instance.GetMapCell(slotRequest.levelTree, slotRequest.levelID);
+                var slotRequestCell = AUIManager.Instance.GetUI<PopupMapUI>().GetMapCell(slotRequest.levelTree, slotRequest.levelID);
                 // check line unlock or not
                 bool isUnlock = MapManager.Instance.ListMapDBModel.listMapDBModel.Find(e => e.treeFloor == slotRequest.levelTree && e.id == slotRequest.levelID).isFinish;
                 if (isUnlock)
