@@ -27,7 +27,7 @@ MonoBehaviour:
     and raring to go! Here\u2014a blessing to guarantee sound sleep! Just a little
     present from your \"partner in naptime,\" hehe."
   <AttackDamage>k__BackingField: 18
-  <HitPoint>k__BackingField: 142
+  <HitPoint>k__BackingField: 618
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

@@ -26,7 +26,7 @@ MonoBehaviour:
     by the actors. With a smile on her face, she watches them play their parts, clutching
     plushies of them to her chest as she cheers them on.
   <AttackDamage>k__BackingField: 16
-  <HitPoint>k__BackingField: 160
+  <HitPoint>k__BackingField: 700
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

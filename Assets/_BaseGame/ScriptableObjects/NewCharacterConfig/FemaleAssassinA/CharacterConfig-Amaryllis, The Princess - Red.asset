@@ -26,7 +26,7 @@ MonoBehaviour:
     we've had any visitors besides Lilium. I know why you're here, though. You must
     be my dear Knight.
   <AttackDamage>k__BackingField: 22
-  <HitPoint>k__BackingField: 178
+  <HitPoint>k__BackingField: 721
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

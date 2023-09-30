@@ -27,7 +27,7 @@ MonoBehaviour:
     doesn't matter! I may be a kid, but that doesn't mean I have to listen to my
     parents!
   <AttackDamage>k__BackingField: 18
-  <HitPoint>k__BackingField: 153
+  <HitPoint>k__BackingField: 596
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

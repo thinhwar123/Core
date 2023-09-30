@@ -26,7 +26,7 @@ MonoBehaviour:
     I won't hold it against you, but giving in will make things so much easier. I
     won't let anyone stand in my way. I swore I would do anything for her.
   <AttackDamage>k__BackingField: 22
-  <HitPoint>k__BackingField: 145
+  <HitPoint>k__BackingField: 622
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 2
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,

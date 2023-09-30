@@ -29,7 +29,7 @@ MonoBehaviour:
     who wandered many walks of life saw that his true calling was not that of a knight,
     but of a teacher.'
   <AttackDamage>k__BackingField: 21
-  <HitPoint>k__BackingField: 150
+  <HitPoint>k__BackingField: 615
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 2
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,

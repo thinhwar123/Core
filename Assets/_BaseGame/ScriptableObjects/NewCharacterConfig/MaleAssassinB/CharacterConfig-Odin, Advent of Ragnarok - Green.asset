@@ -26,7 +26,7 @@ MonoBehaviour:
     fought bravely, though the end had arrived before the ordained hour. In their
     death throes, anguished voices pled for divine aid... but none was forthcoming.
   <AttackDamage>k__BackingField: 23
-  <HitPoint>k__BackingField: 140
+  <HitPoint>k__BackingField: 591
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 2
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,

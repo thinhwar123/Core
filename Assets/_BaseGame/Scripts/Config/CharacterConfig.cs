@@ -32,7 +32,7 @@ public class CharacterConfig : ScriptableObject
     
     [field: ProgressBar(10, 30, 1, 0.1f, 0.1f)]
     [field: SerializeField] public int AttackDamage { get; private set; }
-    [field: ProgressBar(100, 200, 0.1f, 1f, 0.1f)]
+    [field: ProgressBar(400, 800, 0.1f, 1f, 0.1f)]
     [field: SerializeField] public int HitPoint { get; private set; }
     
     [field: SerializeField] public Character.ChainCombo[] CharacterChainCombo {get; private set;}

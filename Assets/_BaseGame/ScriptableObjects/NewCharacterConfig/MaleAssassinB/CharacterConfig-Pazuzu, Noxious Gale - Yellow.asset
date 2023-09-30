@@ -27,7 +27,7 @@ MonoBehaviour:
     by its noxious gales. The chimera sends its minions out, scattered to the four
     winds, to do its bidding.
   <AttackDamage>k__BackingField: 27
-  <HitPoint>k__BackingField: 173
+  <HitPoint>k__BackingField: 692
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 2
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,
