@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: EnemyGlobalConfig
   m_EditorClassIdentifier: 
   <EnemyConfigs>k__BackingField:
-  - {fileID: 11400000, guid: 658570f193e4d0044b8e208f07fc4ccc, type: 2}
-  - {fileID: 11400000, guid: 9af4104f2994f5e46ac3442d6c5f9b65, type: 2}
-  - {fileID: 11400000, guid: d770276c1fd2202428635646e2ffc5f9, type: 2}
-  - {fileID: 11400000, guid: e5859f8616912e44dac4e9b3aac06230, type: 2}
-  - {fileID: 11400000, guid: 558d68b92690b174998bb86f569021ac, type: 2}
-  - {fileID: 11400000, guid: 5347de6837440d445998e1e8196e65f6, type: 2}
-  - {fileID: 11400000, guid: 8bfe3ca1b12ca824bbd3a4366b806db8, type: 2}
-  - {fileID: 11400000, guid: 76d30783724eaff4cae5515deb3ef2e1, type: 2}
-  - {fileID: 11400000, guid: 3e301b3bb4be7234893576c1d46f1481, type: 2}
-  - {fileID: 11400000, guid: cb355e0cd34bb3445ab725822810cb11, type: 2}
+  - {fileID: 11400000, guid: fb5ec6894ee004742b9196169b4ab747, type: 2}
+  - {fileID: 11400000, guid: 8d12f4527b93067499b94875dcaa8d13, type: 2}
+  - {fileID: 11400000, guid: 4ed98c252c67156479b33f1d5932f216, type: 2}
+  - {fileID: 11400000, guid: c84b5f7ee89be3b439290d0ecded4161, type: 2}
+  - {fileID: 11400000, guid: e70ad4f1e6d06a949b40f8d21d55d3d6, type: 2}
+  - {fileID: 11400000, guid: 425cc379cedc2744c9d2a9ca8f964807, type: 2}
+  - {fileID: 11400000, guid: 47d5f01d213f5e3499c892ad2decb4d7, type: 2}
+  - {fileID: 11400000, guid: eef58734fc39dbc46985dc0c4b0b71a9, type: 2}
+  - {fileID: 11400000, guid: 9efd937332b3a2c4daad5e58b27cb186, type: 2}
+  - {fileID: 11400000, guid: 82a422d443099da4b86632953ed3206b, type: 2}

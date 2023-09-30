@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
@@ -28,6 +27,7 @@ public partial class Character : Entity
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public bool IsHide {get; private set;}
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public bool IsReadyCombo {get; private set;}
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public bool IsIdle {get; private set;}
+    [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public bool IsDeath {get; private set;}
     private UIHealthBar UIHealthBar { get; set; }
     private Tween MoveTween { get; set; }
     private Tween RotateTween { get; set; }
@@ -61,6 +61,7 @@ public partial class Character : Entity
         Animator = CharacterModel.Animator;
         CurrentCell = startCell;
         IsReadyCombo = false;
+        IsDeath = false;
         
         InitTriggerAction();
 
@@ -72,22 +73,12 @@ public partial class Character : Entity
             UIHealthBar.UpdateValue(1);
         }
     }
-    public void PlayAnimation(string animationName)
-    {
-        if (animationName == "") return;
-        if (CurrentAnimation == animationName) return;
-        Animator.Play(animationName);
-    }
-
     private async UniTask<float> GetAnimationDuration(string stateAnimationName, CancellationToken token){
         if (stateAnimationName == "") return 0;
         while (!Animator.GetCurrentAnimatorStateInfo(0).IsName(stateAnimationName))
         {
             await UniTask.Delay(100, cancellationToken: token);
         }
-        return Animator.GetCurrentAnimatorStateInfo(0).length;
-    }
-    private float GetCurrentAnimationDuration(){
         return Animator.GetCurrentAnimatorStateInfo(0).length;
     }
 
@@ -117,6 +108,8 @@ public partial class Character : Entity
         HitPoint -= damage;
         if (HitPoint < 0) HitPoint = 0;
         UIHealthBar.UpdateValue(HitPoint / (float) CharacterConfig.HitPoint);
+        UIDamagePopup damagePopup = GameManager.Instance.CreateUIDamagePopup();
+        damagePopup.SetupDamagePopup(damage, Transform);
     }
 
     public override void OnCombo()

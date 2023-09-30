@@ -107,7 +107,7 @@ public class CellManager : Singleton<CellManager>
         return result;
     }
 
-    private List<Cell> GetCellInRange(int x, int y, int range)
+    public List<Cell> GetCellInRange(int x, int y, int range)
     {
         List<Cell> result = new List<Cell>();
         for (int i = x - range; i <= x + range; i++)
@@ -187,10 +187,8 @@ public class CellManager : Singleton<CellManager>
     public async UniTask RecoverConsumedCell()
     {
         List<Cell> consumedCells = CellList.Where(x => x.IsConsumed && !x.IsCharacterCell).ToList();
-        Debug.Log(consumedCells.Count);
         for (var i = 0; i < consumedCells.Count; i++)
         {
-            Debug.Log(i);
             consumedCells[i].RandomNewColor();
             await UniTask.Delay(100);
         }
@@ -209,6 +207,11 @@ public class CellManager : Singleton<CellManager>
                 x.SetupUnSelect();
             }
         });
+    }
+    public List<Cell> GetPath(Cell currentCell, Cell targetCell)
+    {
+        // TODO: Implement A* algorithm
+        return new List<Cell>() { targetCell };
     }
     
 #if UNITY_EDITOR
@@ -249,4 +252,6 @@ public class CellManager : Singleton<CellManager>
         CellList.Clear();
     }
 #endif
+
+
 }

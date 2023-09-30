@@ -8,7 +8,9 @@ public class InputManager : Singleton<InputManager>
     [field: SerializeField] private bool IsTouchingUI { get; set; }
     [field: SerializeField] private LayerMask WhatIsCell { get; set; }
     [field: SerializeField] private EAttribute SelectEAttribute { get; set; }
+    [field: SerializeField] private GameObject LinkPrefab { get; set; }
     private List<Cell> CellList { get; set; } = new List<Cell>();
+    private List<GameObject> LinkList { get; set; } = new List<GameObject>();
 
     private void Awake()
     {
@@ -36,7 +38,7 @@ public class InputManager : Singleton<InputManager>
             if (Physics.Raycast(ray, out RaycastHit hitInfo, 200, WhatIsCell))
             {
                 Cell hitCell = CacheComponent.GetCell(hitInfo.collider);
-                if (CellList.Count == 0 && hitCell.CurrentState == Cell.State.Normal)
+                if (CellList.Count == 0 && hitCell.CurrentState == Cell.State.Normal && !hitCell.IsEnemyCell && !hitCell.IsCharacterCell)
                 {
                     CameraManager.Instance.SetFocusZoom();
                     SelectEAttribute = hitCell.CellAttribute;
@@ -44,15 +46,17 @@ public class InputManager : Singleton<InputManager>
                     CellManager.Instance.FocusAllCell(SelectEAttribute);
                     CellList.Add(hitCell);
                     hitCell.SetupSelect();
+                    UpdateLink();
                 }
 
-                if (!CellList.Contains(hitCell) && hitCell.CurrentState == Cell.State.Focus &&
-                    hitCell.CellAttribute == SelectEAttribute)
+                if (CellList.Count > 0 && !CellList.Contains(hitCell) && hitCell.CurrentState == Cell.State.Focus &&
+                    hitCell.CellAttribute == SelectEAttribute && !hitCell.IsEnemyCell && !hitCell.IsCharacterCell)
                 {
                     if (CellList[^1].IsCellInSmallArea(hitCell))
                     {
                         CellList.Add(hitCell);
                         hitCell.SetupSelect();
+                        UpdateLink();
                     }
                 }
 
@@ -62,6 +66,7 @@ public class InputManager : Singleton<InputManager>
                     {
                         CellList[^1].SetupFocus();
                         CellList.RemoveAt(CellList.Count - 1);
+                        UpdateLink();
                     }
                 }
             }
@@ -80,6 +85,7 @@ public class InputManager : Singleton<InputManager>
             {
                 TeamManager.Instance.TeamMoveFollowPath(CellList);
             }
+            ClearLink();
         }
     }
 
@@ -106,5 +112,27 @@ public class InputManager : Singleton<InputManager>
         }
 
         return IsTouchingUI;
+    }
+
+    private void UpdateLink()
+    {
+        ClearLink();
+        if(CellList.Count < 2) return;
+        for (int i = 0; i < CellList.Count - 1; i++)
+        {
+            Vector3 direction = CellList[i + 1].transform.position - CellList[i].transform.position;
+            Vector3 position = CellList[i].transform.position + direction / 2f;
+            float distance = direction.magnitude;
+            
+            GameObject link = Instantiate(LinkPrefab, position, Quaternion.identity);
+            link.transform.localScale = new Vector3(1, 1, distance);
+            link.transform.rotation = Quaternion.LookRotation(direction);
+            LinkList.Add(link);
+        }
+    }
+    private void ClearLink()
+    {
+        LinkList.ForEach(Destroy);
+        LinkList.Clear();
     }
 }

@@ -14,7 +14,8 @@ public class GameManager : Singleton<GameManager>
     }
     
     [field: SerializeField] public UIHealthBar UIHealthBarPrefab {get; private set;}
-    [field: SerializeField] public Transform UIHealthBarContainer {get; private set;}
+    [field: SerializeField] public UIDamagePopup UIDamagePopupPrefab {get; private set;}
+    [field: SerializeField] public Transform UIInGameContainer {get; private set;}
     [field: SerializeField] public GameState CurrentGameState {get; private set;}
     private void Start()
     {
@@ -25,7 +26,11 @@ public class GameManager : Singleton<GameManager>
     
     public UIHealthBar CreateUIHealthBar()
     {
-        return Instantiate(UIHealthBarPrefab, UIHealthBarContainer);
+        return Instantiate(UIHealthBarPrefab, UIInGameContainer);
+    }
+    public UIDamagePopup CreateUIDamagePopup()
+    {
+        return Instantiate(UIDamagePopupPrefab, UIInGameContainer);
     }
     public void SetGameState(GameState gameState)
     {

@@ -28,6 +28,7 @@ public partial class Cell : AwaitableCachedMonoBehaviour
     [ShowInInspector]
     public bool IsEnemyCell => Owner != null && Owner is Enemy;
     public bool IsConsumed { get;set; }
+
     public void SetupCell(EAttribute type, int xPos, int yPos)
     {
         IsConsumed = false;
