@@ -14,8 +14,8 @@ namespace BaseGame
         [SerializeField] public GameObject mapLine;
         [SerializeField] public GameObject researingObj;
         [SerializeField] GameObject selectOBj;
-        [SerializeField] GameObject maxLevel;
-        [SerializeField] MapDetailUI mapDetail;
+        // [SerializeField] GameObject maxLevel;
+        // [SerializeField] MapDetailUI mapDetail;
         [SerializeField] Sprite sprBgFinish;
         [SerializeField] Sprite sprBgMap;
         MapDBModel mapDBModel;
@@ -40,21 +40,21 @@ namespace BaseGame
         /// <param name="_mapDataModel"></param>
         public void SetMapData(MapDataModel _mapDataModel, bool showLine = true)
         {
-            if (MapDetailUI.GetInstance().CurCellSelect==null)
-                selectOBj.SetActive(false);
-            else
-                selectOBj.SetActive(this == MapDetailUI.GetInstance().CurCellSelect);
+            // if (MapDetailUI.GetInstance().CurCellSelect==null)
+            //     selectOBj.SetActive(false);
+            // else
+            //     selectOBj.SetActive(this == MapDetailUI.GetInstance().CurCellSelect);
 
             mapDBModel = MapManager.Instance.ListMapDBModel.listMapDBModel.Find(e => e.treeFloor == _mapDataModel.mapTree && e.id == _mapDataModel.mapID);
             mapDataModel = _mapDataModel;
             imgMap.sprite = mapDataModel.sprMap;
-            maxLevel.SetActive(mapDBModel.isFinish);
+            //maxLevel.SetActive(mapDBModel.isFinish);
             if (showLine)
                 StartCoroutine(IECheckLine());
             var listSlotRequest = mapDataModel.mapSlotRequests;
             if (listSlotRequest.Count > 0)
             {
-                imgActive.fillAmount = mapDBModel.numbSlotUnlock * 1.0f / listSlotRequest.Count;
+                imgActive.fillAmount = 1;
             }
             else
             {
