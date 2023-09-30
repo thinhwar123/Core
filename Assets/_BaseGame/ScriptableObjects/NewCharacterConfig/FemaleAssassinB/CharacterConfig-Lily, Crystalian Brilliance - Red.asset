@@ -25,14 +25,14 @@ MonoBehaviour:
   <Profile>k__BackingField: "Everything's turned to ice. We've never had blizzards
     like this before... Not even my sister knows what to do... Are the bad guys going
     to win?\r"
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 25
+  <HitPoint>k__BackingField: 175
   <CharacterChainCombo>k__BackingField:
-  - <ChainCount>k__BackingField: 4
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+  - <ChainCount>k__BackingField: 3
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,
       type: 2}
   - <ChainCount>k__BackingField: 8
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4b97506ecd953544bab2ca0ce9ddbfd2,
       type: 2}
   <SkillConfig>k__BackingField: {fileID: 11400000, guid: d4131b9a64e3b3a48ba12a6218f6abf1,
     type: 2}

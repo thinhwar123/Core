@@ -25,14 +25,14 @@ MonoBehaviour:
   <Profile>k__BackingField: No more trying to look "cool." Hiding in your shells
     like hatchlings is way lamer than giving the game your best fight. Win or lose...
     get out there and show 'em what dragons can do when they're fired up!
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 22
+  <HitPoint>k__BackingField: 146
   <CharacterChainCombo>k__BackingField:
-  - <ChainCount>k__BackingField: 4
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
-      type: 2}
-  - <ChainCount>k__BackingField: 8
+  - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+      type: 2}
+  - <ChainCount>k__BackingField: 7
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4b97506ecd953544bab2ca0ce9ddbfd2,
       type: 2}
   <SkillConfig>k__BackingField: {fileID: 11400000, guid: a2475bb4e101bb646991cffdb9f20051,
     type: 2}

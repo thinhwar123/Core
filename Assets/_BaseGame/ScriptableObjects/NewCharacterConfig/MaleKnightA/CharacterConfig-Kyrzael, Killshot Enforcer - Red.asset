@@ -26,14 +26,14 @@ MonoBehaviour:
     than a piece of scrap? Just thinking does not bestow intelligence, but you are
     too dull to realize that. You are a blight on society, and I, Kyrzael, as the
     First Enforcer, will mete out your punishment.
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 25
+  <HitPoint>k__BackingField: 175
   <CharacterChainCombo>k__BackingField:
-  - <ChainCount>k__BackingField: 4
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
-      type: 2}
-  - <ChainCount>k__BackingField: 8
+  - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+      type: 2}
+  - <ChainCount>k__BackingField: 7
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4b97506ecd953544bab2ca0ce9ddbfd2,
       type: 2}
   <SkillConfig>k__BackingField: {fileID: 11400000, guid: 444fb93fb89f1244c94437c0be3d757b,
     type: 2}

@@ -25,14 +25,14 @@ MonoBehaviour:
   <Profile>k__BackingField: I've been waiting for someone like you this entire time,
     you see. Someone willing to save her. To bring us closer to our happy ending.
     I trust you will play your part until all is over... dear Knight.
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 17
+  <HitPoint>k__BackingField: 143
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
       type: 2}
   - <ChainCount>k__BackingField: 8
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,
       type: 2}
   <SkillConfig>k__BackingField: {fileID: 11400000, guid: f0b34e0c616fd9c4c9af6c0da5e55320,
     type: 2}
