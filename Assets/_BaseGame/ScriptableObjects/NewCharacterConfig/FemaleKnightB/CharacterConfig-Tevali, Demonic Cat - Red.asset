@@ -27,7 +27,7 @@ MonoBehaviour:
     from making shamisen to chasing mice. Now, my squeaky little friend, are you
     ready to play and be played?
   <AttackDamage>k__BackingField: 21
-  <HitPoint>k__BackingField: 144
+  <HitPoint>k__BackingField: 601
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

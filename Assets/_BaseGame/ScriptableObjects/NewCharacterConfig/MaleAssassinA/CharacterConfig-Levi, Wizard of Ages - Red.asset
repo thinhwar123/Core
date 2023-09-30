@@ -26,7 +26,7 @@ MonoBehaviour:
     that only I can wield, have you? Very well. I will... not revive your friend!
     Did I get your hopes up? I did, didn't I?! Hyahaha!
   <AttackDamage>k__BackingField: 15
-  <HitPoint>k__BackingField: 157
+  <HitPoint>k__BackingField: 730
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,

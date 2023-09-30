@@ -27,7 +27,7 @@ MonoBehaviour:
     power. Heh. The more death prevails, the longer one can live. Ahh, my thirst
     grows... Mourn with mirth, for Deathbringer strikes.!"
   <AttackDamage>k__BackingField: 23
-  <HitPoint>k__BackingField: 164
+  <HitPoint>k__BackingField: 764
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

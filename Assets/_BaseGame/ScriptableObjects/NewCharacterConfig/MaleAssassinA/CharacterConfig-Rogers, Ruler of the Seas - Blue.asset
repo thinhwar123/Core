@@ -26,7 +26,7 @@ MonoBehaviour:
     under someone else's colors\u2014that's more cargo than I'm willing to hold.
     But if the crew be trustworthy, then I could be persuaded to weigh anchor!"
   <AttackDamage>k__BackingField: 30
-  <HitPoint>k__BackingField: 165
+  <HitPoint>k__BackingField: 690
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,

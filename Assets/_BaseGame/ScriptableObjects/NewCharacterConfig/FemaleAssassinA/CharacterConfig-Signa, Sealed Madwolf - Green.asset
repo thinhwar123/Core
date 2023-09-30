@@ -27,7 +27,7 @@ MonoBehaviour:
     for a cursed beast. Run, before time runs out and the seal lifts... Before it's
     too late. I don't want to hurt anyone...\r"
   <AttackDamage>k__BackingField: 22
-  <HitPoint>k__BackingField: 138
+  <HitPoint>k__BackingField: 652
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

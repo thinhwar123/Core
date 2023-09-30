@@ -27,7 +27,7 @@ MonoBehaviour:
     thing tying me down is the ambition that I chose to see through. Pull down the
     moon and drench it in blood, Wyrmbreaker!
   <AttackDamage>k__BackingField: 23
-  <HitPoint>k__BackingField: 130
+  <HitPoint>k__BackingField: 567
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,

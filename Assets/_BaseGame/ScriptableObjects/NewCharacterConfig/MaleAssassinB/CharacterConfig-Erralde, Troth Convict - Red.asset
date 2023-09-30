@@ -27,7 +27,7 @@ MonoBehaviour:
     I shall break the wings of the angels themselves and throw them down to earth.
     Then shall I brand them with the mark of Juratio."
   <AttackDamage>k__BackingField: 16
-  <HitPoint>k__BackingField: 161
+  <HitPoint>k__BackingField: 652
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 2
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,

@@ -26,7 +26,7 @@ MonoBehaviour:
     like hatchlings is way lamer than giving the game your best fight. Win or lose...
     get out there and show 'em what dragons can do when they're fired up!
   <AttackDamage>k__BackingField: 22
-  <HitPoint>k__BackingField: 146
+  <HitPoint>k__BackingField: 589
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,

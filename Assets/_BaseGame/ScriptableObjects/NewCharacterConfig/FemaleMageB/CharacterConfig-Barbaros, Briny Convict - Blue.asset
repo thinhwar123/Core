@@ -26,8 +26,8 @@ MonoBehaviour:
     treasure of all. Virtue and morality be damned; if you've got something in your
     sights, you take it. Join me; we'll raise our sinful sails and start a new golden
     age for pirates!
-  <AttackDamage>k__BackingField: 17
-  <HitPoint>k__BackingField: 159
+  <AttackDamage>k__BackingField: 21
+  <HitPoint>k__BackingField: 787
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

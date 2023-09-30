@@ -26,7 +26,7 @@ MonoBehaviour:
     must first bring their body and soul together. But right now... their soul rests
     in the underworld.\r"
   <AttackDamage>k__BackingField: 18
-  <HitPoint>k__BackingField: 155
+  <HitPoint>k__BackingField: 661
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

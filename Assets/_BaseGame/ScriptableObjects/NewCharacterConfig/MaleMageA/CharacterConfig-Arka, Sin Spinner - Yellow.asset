@@ -26,7 +26,7 @@ MonoBehaviour:
     like I'm just as lame as all these other imps. Wait, Teach, don't tell me you
     agree with her! Is that why you've been following me around?
   <AttackDamage>k__BackingField: 16
-  <HitPoint>k__BackingField: 172
+  <HitPoint>k__BackingField: 708
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,

@@ -26,7 +26,7 @@ MonoBehaviour:
     me! If you keep one foot in front of the other, and never fear, you too can change
     the world! Come, let's go on an adventure\u2014to a wondrous, far-off land!"
   <AttackDamage>k__BackingField: 29
-  <HitPoint>k__BackingField: 165
+  <HitPoint>k__BackingField: 560
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

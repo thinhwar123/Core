@@ -26,7 +26,7 @@ MonoBehaviour:
     different. And so did a face I thought I knew well, watching me from the headmistress's
     office. Damn, Teach... not bad.
   <AttackDamage>k__BackingField: 23
-  <HitPoint>k__BackingField: 146
+  <HitPoint>k__BackingField: 626
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

@@ -25,7 +25,7 @@ MonoBehaviour:
   <Profile>k__BackingField: "I'm gonna do this! A hero doesn't let anything stand
     in their way!\r"
   <AttackDamage>k__BackingField: 25
-  <HitPoint>k__BackingField: 138
+  <HitPoint>k__BackingField: 618
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,

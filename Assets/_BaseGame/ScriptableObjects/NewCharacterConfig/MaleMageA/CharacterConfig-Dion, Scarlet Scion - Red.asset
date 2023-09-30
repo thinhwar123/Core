@@ -26,7 +26,7 @@ MonoBehaviour:
     I've been giving compliments and flowers to everyone I meet at Dranz, but...
     I didn't expect quite so many people to reciprocate!
   <AttackDamage>k__BackingField: 23
-  <HitPoint>k__BackingField: 142
+  <HitPoint>k__BackingField: 595
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,

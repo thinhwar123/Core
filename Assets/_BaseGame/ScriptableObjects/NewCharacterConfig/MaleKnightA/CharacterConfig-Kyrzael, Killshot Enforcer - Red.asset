@@ -27,7 +27,7 @@ MonoBehaviour:
     too dull to realize that. You are a blight on society, and I, Kyrzael, as the
     First Enforcer, will mete out your punishment.
   <AttackDamage>k__BackingField: 25
-  <HitPoint>k__BackingField: 175
+  <HitPoint>k__BackingField: 678
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 3
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
