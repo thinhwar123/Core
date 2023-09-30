@@ -3762,7 +3762,7 @@ PrefabInstance:
     - target: {fileID: 592588531451281275, guid: d4bf537e50dafe5428ad163e9e6b99ea,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4bf537e50dafe5428ad163e9e6b99ea, type: 3}
@@ -4099,11 +4099,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1265705131}
     m_Modifications:
-    - target: {fileID: 2519353613842115182, guid: c26db7c80e36f804b972df4460d641b1,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 187844db86197ae4bb614445ab5efd0a, type: 2}
     - target: {fileID: 2519353614277490212, guid: c26db7c80e36f804b972df4460d641b1,
         type: 3}
       propertyPath: m_RootOrder
@@ -4112,7 +4107,7 @@ PrefabInstance:
     - target: {fileID: 2519353614277490212, guid: c26db7c80e36f804b972df4460d641b1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4497903
+      value: -2.52
       objectReference: {fileID: 0}
     - target: {fileID: 2519353614277490212, guid: c26db7c80e36f804b972df4460d641b1,
         type: 3}
@@ -4167,7 +4162,7 @@ PrefabInstance:
     - target: {fileID: 2519353614277490213, guid: c26db7c80e36f804b972df4460d641b1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c26db7c80e36f804b972df4460d641b1, type: 3}
@@ -4336,6 +4331,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CharacterModel-Male, Assassin, A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159517509446389476, guid: 6fa7faeaba583cd45a0913779bda98b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5156139280744681597, guid: 6fa7faeaba583cd45a0913779bda98b6,
         type: 3}
@@ -4552,6 +4552,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5097100340674484308, guid: 42d750bb50e0a144493284dfd3bd34dd,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 187844db86197ae4bb614445ab5efd0a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42d750bb50e0a144493284dfd3bd34dd, type: 3}
 --- !u!1001 &5922361147782097598
@@ -4646,6 +4651,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterModel-Male, Assassin, B
       objectReference: {fileID: 0}
+    - target: {fileID: 2043261618301459331, guid: 7cd89e980ee807740aaf5f8a58603a0a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5458989256096613658, guid: 7cd89e980ee807740aaf5f8a58603a0a,
         type: 3}
       propertyPath: m_RootOrder
@@ -4654,7 +4664,7 @@ PrefabInstance:
     - target: {fileID: 5458989256096613658, guid: 7cd89e980ee807740aaf5f8a58603a0a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4497903
+      value: 3.14
       objectReference: {fileID: 0}
     - target: {fileID: 5458989256096613658, guid: 7cd89e980ee807740aaf5f8a58603a0a,
         type: 3}
@@ -4718,7 +4728,7 @@ PrefabInstance:
     - target: {fileID: 6965260692324729340, guid: 0c85d58cd0f1394449f1c44dd02212d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4497903
+      value: -5.51
       objectReference: {fileID: 0}
     - target: {fileID: 6965260692324729340, guid: 0c85d58cd0f1394449f1c44dd02212d3,
         type: 3}
@@ -4773,7 +4783,7 @@ PrefabInstance:
     - target: {fileID: 6965260692324729341, guid: 0c85d58cd0f1394449f1c44dd02212d3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c85d58cd0f1394449f1c44dd02212d3, type: 3}
@@ -4943,6 +4953,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterModel-Female, Assassin, B
       objectReference: {fileID: 0}
+    - target: {fileID: 2353257109771541941, guid: 773c84b73f4c46244b381b9329f9c197,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8588738924665635628, guid: 773c84b73f4c46244b381b9329f9c197,
         type: 3}
       propertyPath: m_RootOrder
@@ -4951,7 +4966,7 @@ PrefabInstance:
     - target: {fileID: 8588738924665635628, guid: 773c84b73f4c46244b381b9329f9c197,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4497903
+      value: 2.168
       objectReference: {fileID: 0}
     - target: {fileID: 8588738924665635628, guid: 773c84b73f4c46244b381b9329f9c197,
         type: 3}
@@ -5306,6 +5321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CharacterModel-Female, Asssassin, A
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786427104252336790, guid: c085a97666d4d714eb0da18892d4edc7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c085a97666d4d714eb0da18892d4edc7, type: 3}
