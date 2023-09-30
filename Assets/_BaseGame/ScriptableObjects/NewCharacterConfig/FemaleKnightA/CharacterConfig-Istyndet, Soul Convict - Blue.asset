@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   <CharacterName>k__BackingField: Istyndet
   <NickName>k__BackingField: Soul Convict
-  <CharacterStar>k__BackingField: 4
+  <CharacterStar>k__BackingField: 5
   <CharacterAttribute>k__BackingField: 2
   <CharacterModel>k__BackingField: {fileID: 6123009807578079876, guid: 561b310de8e210247a5a99b238058e6a,
     type: 3}
@@ -26,14 +26,14 @@ MonoBehaviour:
     can you extract the true spirit; the dregs are mere remnants of that awesome
     power. Heh. The more death prevails, the longer one can live. Ahh, my thirst
     grows... Mourn with mirth, for Deathbringer strikes.!"
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 23
+  <HitPoint>k__BackingField: 164
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
       type: 2}
   - <ChainCount>k__BackingField: 8
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,
       type: 2}
   <SkillConfig>k__BackingField: {fileID: 11400000, guid: 5f7e3540033bfc74ab226b71f1071342,
     type: 2}

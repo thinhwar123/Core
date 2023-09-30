@@ -26,13 +26,13 @@ MonoBehaviour:
     of beasts has immeasurably increased its power. Other beasts bow before it, cowed
     by its noxious gales. The chimera sends its minions out, scattered to the four
     winds, to do its bidding.
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 27
+  <HitPoint>k__BackingField: 173
   <CharacterChainCombo>k__BackingField:
-  - <ChainCount>k__BackingField: 4
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+  - <ChainCount>k__BackingField: 2
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,
       type: 2}
-  - <ChainCount>k__BackingField: 8
+  - <ChainCount>k__BackingField: 5
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
       type: 2}
   <SkillConfig>k__BackingField: {fileID: 11400000, guid: d1d2417584d563f438073b2e91cc60b2,
