@@ -84,7 +84,7 @@ namespace BaseGame
                 var slotRequest = listSlotRequest[i];
                 var slotRequestCell = PopupMapUI.Instance.GetMapCell(slotRequest.levelTree, slotRequest.levelID);
                 var line = Instantiate(slotRequestCell.mapLine, slotRequestCell.mapLine.transform.parent);
-                line.transform.localPosition = Vector3.zero;
+                
                 if( Mathf.Abs(mapDataModel.mapTree - slotRequest.levelTree) >= 2)
                 {
                     var rectTransForm = line.GetComponent<RectTransform>();
@@ -98,19 +98,21 @@ namespace BaseGame
                 // rotate line with request cell
                 Vector2 despoint = slotRequestCell.transform.position;
                 Vector2 startPoint = transform.position;
+                line.transform.localPosition = -(despoint - startPoint)/2;
                 var direction = startPoint - despoint;
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
                 line.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                //lineRect.sizeDelta = new Vector2(lineRect.sizeDelta.x, distance);
+                RectTransform lineRect = line.GetComponent<RectTransform>();
+                lineRect.sizeDelta = new Vector2(lineRect.sizeDelta.x, direction.magnitude);
                 line.gameObject.SetActive(true);
             }
             mapDBModel.numbSlotUnlock = numbUnlock;
             mapDBModel.isUnlock = numbUnlock == listSlotRequest.Count;
-            if (listSlotRequest.Count > 0)
-            {
-                imgActive.fillAmount = numbUnlock * 1.0f / listSlotRequest.Count;
-            }
-            else
+            // if (listSlotRequest.Count > 0)
+            // {
+            //     imgActive.fillAmount = numbUnlock * 1.0f / listSlotRequest.Count;
+            // }
+            //else
             {
                 imgActive.fillAmount = 1;
             }

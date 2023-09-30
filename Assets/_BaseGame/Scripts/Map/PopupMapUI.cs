@@ -70,6 +70,7 @@ namespace BaseGame
         public void SelectMapCell(MapCellUI cellUI)
         {
             //mapDetailUI.SetMapData(cellUI);
+            
         }
 
         // public MapDetailUI GetMapDetailUIForTut()
