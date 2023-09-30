@@ -24,12 +24,12 @@ public class GameManager : Singleton<GameManager>
     
     private void Start()
     {
-        CreateMap(0, 0);
-        AUIManager.Instance.OpenUI<UIInGame>().SetupOnOpen(TeamManager.Instance.CharacterConfigs);
-        SetGameState(GameState.PlayerTurn);
+        AUIManager.Instance.OpenUI<PopupMapUI>();
+        SetGameState(GameState.SelectLevel);
     }
     public void CreateMap(int treeFloor, int mapId)
     {
+        Debug.Log("Start Level");
         ClearAllMap();
         
         // MapDBModel mapDBModel = MapManager.Instance.ListMapDBModel.listMapDBModel.First(x => x.treeFloor == treeFloor && x.id == mapId);
@@ -53,6 +53,7 @@ public class GameManager : Singleton<GameManager>
             .ToList();
         EnemyManager.Instance.InitEnemy(listEnemy, enemyCell);
         TeamManager.Instance.InitTeam();
+        SetGameState(GameState.PlayerTurn);
     }
     
     public UIHealthBar CreateUIHealthBar()
