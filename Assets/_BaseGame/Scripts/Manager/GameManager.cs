@@ -3,7 +3,6 @@ using System.Linq;
 using BaseGame;
 using TW.Utility.DesignPattern;
 using UnityEngine;
-using Sirenix.Utilities;
 using TW.UI.CustomComponent;
 using TW.Utility.Extension;
 
@@ -72,10 +71,18 @@ public class GameManager : Singleton<GameManager>
     public void OnWinGame()
     {
         Debug.Log("Win Game");
+        ClearAllMap();
+        SetGameState(GameManager.GameState.SelectLevel);
+        AUIManager.Instance.CloseUI<UIInGame>();
+        AUIManager.Instance.OpenUI<PopupMapUI>();
     }
     public void OnLoseGame()
     {
         Debug.Log("Lose Game");
+        ClearAllMap();
+        SetGameState(GameManager.GameState.SelectLevel);
+        AUIManager.Instance.CloseUI<UIInGame>();
+        AUIManager.Instance.OpenUI<PopupMapUI>();
     }
 
     public void ClearAllMap()

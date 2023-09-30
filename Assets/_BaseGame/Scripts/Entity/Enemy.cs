@@ -5,6 +5,7 @@ using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using TW.Utility.DesignPattern;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public partial class Enemy : Entity
@@ -36,6 +37,18 @@ public partial class Enemy : Entity
         InitStateMachine();
 
     }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        StateMachine.Stop();
+        if (UIHealthBar != null)
+        {
+            Destroy(UIHealthBar.gameObject);
+        }
+
+    }
+
     public void InitConfig(EnemyConfig enemyConfig, Cell startCell)
     {
         EnemyConfig = enemyConfig;

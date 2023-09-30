@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using BaseGame;
 using Sirenix.Utilities;
 using TW.UI.CustomComponent;
 using TW.Utility.CustomComponent;
@@ -27,6 +28,10 @@ public class UIInGame : AUIPanel
     private void OnClickHomeButton()
     {
         // TODO: Open Home Panel
+        
         GameManager.Instance.SetGameState(GameManager.GameState.SelectLevel);
+        GameManager.Instance. ClearAllMap();
+        AUIManager.Instance.CloseUI<UIInGame>();
+        AUIManager.Instance.OpenUI<PopupMapUI>();
     }
 }

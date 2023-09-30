@@ -98,6 +98,10 @@ public partial class Character : Entity
     {
         base.OnDestroy();
         StateMachine.Stop();
+        if (UIHealthBar != null)
+        {
+            Destroy(UIHealthBar.gameObject);
+        }
     }
 
     public override void OnAttack()
