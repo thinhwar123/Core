@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574333a4e95f4da40b4be7eee4fc6417, type: 3}
   m_Name: SkillConfig-Heal-Blue
   m_EditorClassIdentifier: 
-  <SkillIcon>k__BackingField: {fileID: 0}
+  <SkillIcon>k__BackingField: {fileID: 21300000, guid: 6c75daa4c63a8d34bb259386760a23a5,
+    type: 3}
   <SkillName>k__BackingField: Aqua Revitalization
   <SkillType>k__BackingField: 4
   <SkillAttribute>k__BackingField: 2

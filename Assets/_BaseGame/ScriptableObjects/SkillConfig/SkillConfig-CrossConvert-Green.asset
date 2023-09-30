@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574333a4e95f4da40b4be7eee4fc6417, type: 3}
   m_Name: SkillConfig-CrossConvert-Green
   m_EditorClassIdentifier: 
-  <SkillIcon>k__BackingField: {fileID: 0}
+  <SkillIcon>k__BackingField: {fileID: 21300000, guid: e8bf8bafb081f8d4eaeee0287c016c3a,
+    type: 3}
   <SkillName>k__BackingField: Tempest Whirl
   <SkillType>k__BackingField: 3
   <SkillAttribute>k__BackingField: 1
