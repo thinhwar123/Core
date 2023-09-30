@@ -58,6 +58,7 @@ public partial class Character : Entity
         AttackDamage = characterConfig.AttackDamage;
         HitPoint = characterConfig.HitPoint;
         CharacterModel = Instantiate(CharacterConfig.CharacterModel, CharacterModelContainer);
+        CharacterModel.transform.localPosition = Vector3.zero;
         Animator = CharacterModel.Animator;
         CurrentCell = startCell;
         IsReadyCombo = false;

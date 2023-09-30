@@ -621,10 +621,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CharacterConfigs>k__BackingField:
-  - {fileID: 11400000, guid: ad8e76d9cbc4b544bb6d8db135bdfcec, type: 2}
-  - {fileID: 11400000, guid: 096780bcfbb967e44af2553ed5d984c5, type: 2}
-  - {fileID: 11400000, guid: 045cb3e579aad9c489b1f86d37aaccea, type: 2}
-  - {fileID: 11400000, guid: ce9754c1316832f48ab3dce80088c80d, type: 2}
+  - {fileID: 11400000, guid: f0a4848a53271824dba080d330cd7ee2, type: 2}
+  - {fileID: 11400000, guid: f137506c256754149933a21f6b128452, type: 2}
+  - {fileID: 11400000, guid: 5a649513033c94d4cb066acb1e3e4fe4, type: 2}
+  - {fileID: 11400000, guid: 950d08f1e1d378743838a0fd1cb88653, type: 2}
   <CharacterPrefab>k__BackingField: {fileID: 8367176707055194473, guid: 356beb856a4ca7746b47258aee6bd0f9,
     type: 3}
   <DelayMoveTime>k__BackingField: 0.5
@@ -712,6 +712,42 @@ Transform:
   m_Father: {fileID: 409680521}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1124642159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124642160}
+  m_Layer: 0
+  m_Name: UIGachaWibu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1124642160
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124642159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1307852655}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1264415454
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +855,7 @@ RectTransform:
   m_Children:
   - {fileID: 197125361}
   - {fileID: 441070526}
+  - {fileID: 1124642160}
   m_Father: {fileID: 1954419163}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
