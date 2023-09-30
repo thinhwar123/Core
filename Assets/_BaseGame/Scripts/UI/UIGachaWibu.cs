@@ -5,5 +5,5 @@ using UnityEngine;
 
 public class UIGachaWibu : AUIPanel
 {
-    [field: SerializeField] public UI fieldName {get; private set;}
+    [field: SerializeField] public UICharacterInfo UICharacter {get; private set;}
 }
