@@ -21,7 +21,7 @@ public class EnemyConfig : ScriptableObject
     public string EnemyNickName { get; private set; }
 
     [field: SerializeField, VerticalGroup("Icon/Stat")]
-    public CharacterModel EnemyModel { get; private set; }
+    public EnemyModel EnemyModel { get; private set; }
 
     [field: SerializeField, VerticalGroup("Icon/Stat")]
     public Sprite EnemyIcon { get; private set; }

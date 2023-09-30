@@ -21,7 +21,7 @@ public class EnemySkillConfig : ScriptableObject
     {
 #if UNITY_EDITOR
         string assetPath = AssetDatabase.GetAssetPath(this.GetInstanceID());
-        AssetDatabase.RenameAsset(assetPath, $"SkillConfig-{EnemyName}-{SkillName}");
+        AssetDatabase.RenameAsset(assetPath, $"SkillConfig-{EnemyName}- {SkillName}");
 #endif
     }
 }

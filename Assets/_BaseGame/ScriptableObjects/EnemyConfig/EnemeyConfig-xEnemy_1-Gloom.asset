@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589308f5bbab3604fa5f11aeaa05cfba, type: 3}
+  m_Name: EnemeyConfig-xEnemy_1-Gloom
+  m_EditorClassIdentifier: 
+  <EnemyPreview>k__BackingField: {fileID: 0}
+  <EnemyId>k__BackingField: 1
+  <EnemyName>k__BackingField: xEnemy_1
+  <EnemyNickName>k__BackingField: Gloom
+  <EnemyModel>k__BackingField: {fileID: 1033978434773447163, guid: 1678ab7951bd1934a80526c9d279df45,
+    type: 3}
+  <EnemyIcon>k__BackingField: {fileID: 0}
+  <Profile>k__BackingField: 
+  <AttackDamage>k__BackingField: 50
+  <HitPoint>k__BackingField: 350
+  <MoveStep>k__BackingField: 2
+  <SkillConfig>k__BackingField: {fileID: 11400000, guid: c0613742bf78e334689f695c1a79376b,
+    type: 2}
