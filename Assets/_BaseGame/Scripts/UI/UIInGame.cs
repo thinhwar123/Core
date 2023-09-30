@@ -27,6 +27,9 @@ public class UIInGame : AUIPanel
     private void OnClickHomeButton()
     {
         // TODO: Open Home Panel
-        GameManager.Instance.SetGameState(GameManager.GameState.SelectLevel);
+        //GameManager.Instance.SetGameState(GameManager.GameState.SelectLevel);
+        AUIManager.Instance.CloseUI<UIInGame>();
+        GameManager.Instance.ClearAllMap();
+        AUIManager.Instance.OpenUI<BaseGame.PopupMapUI>();
     }
 }
