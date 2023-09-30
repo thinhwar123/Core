@@ -42,6 +42,7 @@ public partial class Enemy : EnemyMoveState.IMoveStateHandler
 {
     public void OnMoveStateRequest()
     {
+
         
     }
 

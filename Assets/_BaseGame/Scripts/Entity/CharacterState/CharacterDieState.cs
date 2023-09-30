@@ -17,19 +17,19 @@ public class CharacterDieState : UniTaskState<Character>
     
     public override void OnRequest(Character owner)
     {
-        (owner as CharacterDieState.IDieStateHandler).OnDieStateRequest();
+        (owner as IDieStateHandler).OnDieStateRequest();
     }
     public override async UniTask OnEnter(Character owner, CancellationToken token)
     {
-        await (owner as CharacterDieState.IDieStateHandler).OnDieStateEnter(token);
+        await (owner as IDieStateHandler).OnDieStateEnter(token);
     }
     public override async UniTask OnExecute(Character owner, CancellationToken token)
     {
-        await (owner as CharacterDieState.IDieStateHandler).OnDieStateExecute(token);
+        await (owner as IDieStateHandler).OnDieStateExecute(token);
     }
     public override async UniTask OnExit(Character owner, CancellationToken token)
     {
-        await (owner as CharacterDieState.IDieStateHandler).OnDieStateExit(token);
+        await (owner as IDieStateHandler).OnDieStateExit(token);
     }
 }
 
@@ -37,14 +37,14 @@ public partial class Character : CharacterDieState.IDieStateHandler
 {
     public void OnDieStateRequest()
     {
-        
+        CurrentCell.UnRegisterOwner();
+        Destroy(UIHealthBar.gameObject);
+        SetHide(true);
     }
 
     public async UniTask OnDieStateEnter(CancellationToken token)
     {
-        SetHide(true);
-        IsDeath = true;
-        
+
     }
 
     public async UniTask OnDieStateExecute(CancellationToken token)

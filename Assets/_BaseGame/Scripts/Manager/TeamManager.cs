@@ -39,7 +39,25 @@ public class TeamManager : TW.Utility.DesignPattern.Singleton<TeamManager>
         await UniTask.WaitUntil(() => Characters.All(x => x.IsIdle));
         await CellManager.Instance.RecoverConsumedCell();
         
+        if (EnemyManager.Instance.Enemies.All(e => e.IsDeath))
+        {
+            GameManager.Instance.OnWinGame();
+            return;
+        }
+
+        
         GameManager.Instance.SetGameState(GameManager.GameState.EnemyTurn);
         await EnemyManager.Instance.PlayEnemyTurn();
+        if (Leader.IsDeath)
+        {
+            GameManager.Instance.OnLoseGame();
+            return;
+        }
+
+    }
+    public void ClearTeam()
+    {
+        Characters.ForEach(x => Destroy(x.gameObject));
+        Characters.Clear();
     }
 }

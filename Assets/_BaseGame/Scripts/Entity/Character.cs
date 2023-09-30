@@ -27,7 +27,7 @@ public partial class Character : Entity
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public bool IsHide {get; private set;}
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public bool IsReadyCombo {get; private set;}
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public bool IsIdle {get; private set;}
-    [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public bool IsDeath {get; private set;}
+    public bool IsDeath => HitPoint <= 0;
     private UIHealthBar UIHealthBar { get; set; }
     private Tween MoveTween { get; set; }
     private Tween RotateTween { get; set; }
@@ -61,7 +61,6 @@ public partial class Character : Entity
         Animator = CharacterModel.Animator;
         CurrentCell = startCell;
         IsReadyCombo = false;
-        IsDeath = false;
         
         InitTriggerAction();
 
@@ -110,6 +109,11 @@ public partial class Character : Entity
         UIHealthBar.UpdateValue(HitPoint / (float) CharacterConfig.HitPoint);
         UIDamagePopup damagePopup = GameManager.Instance.CreateUIDamagePopup();
         damagePopup.SetupDamagePopup(damage, Transform);
+        
+        if (IsDeath)
+        {
+            StateMachine.RequestTransition(CharacterDieState.Instance);
+        }
     }
 
     public override void OnCombo()

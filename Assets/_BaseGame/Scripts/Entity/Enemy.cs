@@ -24,6 +24,7 @@ public partial class Enemy : Entity
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public List<Cell> AroundCells {get; private set;}
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] private List<Cell> CellPath {get; set;}
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] private Character TargetCharacter {get; set;}
+    public bool IsDeath => HitPoint <= 0;
     public bool IsTakeTurn { get; set; }
     private UIHealthBar UIHealthBar { get; set; }
     private Tween MoveTween { get; set; }
@@ -87,11 +88,17 @@ public partial class Enemy : Entity
     public override void OnDamage(int damage)
     {
         base.OnDamage(damage);
+        bool isAlive = HitPoint > 0;
         HitPoint -= damage;
         if (HitPoint < 0) HitPoint = 0;
         UIHealthBar.UpdateValue(HitPoint / (float) MaxHitPoint);
         UIDamagePopup damagePopup = GameManager.Instance.CreateUIDamagePopup();
         damagePopup.SetupDamagePopup(damage, Transform);
+        
+        if (isAlive && IsDeath)
+        {
+            StateMachine.RequestTransition(EnemyDieState.Instance);
+        }
     }
 
     public override void OnCombo()
@@ -135,5 +142,9 @@ public partial class Enemy : Entity
             await UniTask.Delay(100, cancellationToken: token);
         }
         return Animator.GetCurrentAnimatorStateInfo(0).length;
+    }
+    private void SetHide(bool value)
+    {
+        EnemyModel.gameObject.SetActive(!value);
     }
 }

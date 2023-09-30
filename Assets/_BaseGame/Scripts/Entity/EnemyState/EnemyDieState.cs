@@ -15,24 +15,24 @@ public class EnemyDieState : UniTaskState<Enemy>
         public UniTask OnDieStateExit(CancellationToken token);
     }
     
-    private static CharacterDieState m_Instance;
-    public static CharacterDieState Instance => m_Instance ??= new CharacterDieState();
+    private static EnemyDieState m_Instance;
+    public static EnemyDieState Instance => m_Instance ??= new EnemyDieState();
     
     public override void OnRequest(Enemy owner)
     {
-        (owner as CharacterDieState.IDieStateHandler).OnDieStateRequest();
+        (owner as IDieStateHandler).OnDieStateRequest();
     }
     public override async UniTask OnEnter(Enemy owner, CancellationToken token)
     {
-        await (owner as CharacterDieState.IDieStateHandler).OnDieStateEnter(token);
+        await (owner as IDieStateHandler).OnDieStateEnter(token);
     }
     public override async UniTask OnExecute(Enemy owner, CancellationToken token)
     {
-        await (owner as CharacterDieState.IDieStateHandler).OnDieStateExecute(token);
+        await (owner as IDieStateHandler).OnDieStateExecute(token);
     }
     public override async UniTask OnExit(Enemy owner, CancellationToken token)
     {
-        await (owner as CharacterDieState.IDieStateHandler).OnDieStateExit(token);
+        await (owner as IDieStateHandler).OnDieStateExit(token);
     }
 }
 
@@ -40,12 +40,15 @@ public partial class Enemy : EnemyDieState.IDieStateHandler
 {
     public void OnDieStateRequest()
     {
-        
+        CurrentCell.UnRegisterOwner();
+        EnemyManager.Instance.Enemies.Remove(this);
+        Destroy(UIHealthBar.gameObject);
+        SetHide(true);
     }
 
     public async UniTask OnDieStateEnter(CancellationToken token)
     {
-        
+
     }
 
     public async UniTask OnDieStateExecute(CancellationToken token)

@@ -10,21 +10,7 @@ public class EnemyManager : Singleton<EnemyManager>
 {
     [field: SerializeField] public Enemy EnemyPrefab {get; private set;}
     [field: SerializeField] public List<Enemy> Enemies {get; private set;} = new List<Enemy>();
-
     
-    public void InitDemoEnemy()
-    {
-        Enemies.Clear();
-        for (int i = 0; i < 3; i++)
-        {
-            Cell randomCell = CellManager.Instance.CellList
-                .Where(c => c.CurrentState != Cell.State.Hide && !c.IsEnemyCell && !c.IsCharacterCell)
-                .GetRandomElement();
-            Enemy enemy = CreateEnemy(randomCell, i);
-            Enemies.Add(enemy);
-        }
-    }
-
     public void InitEnemy(List<BaseGame.EnemyConfig> enemyConfigs, List<Cell> cellPositions)
     {
         Enemies.Clear();
@@ -55,11 +41,17 @@ public class EnemyManager : Singleton<EnemyManager>
         
     public async UniTask PlayEnemyTurn()
     {
-        for (var i = 0; i < Enemies.Count; i++)
+        List<Enemy> newEnemies = Enemies.Where(e => !e.IsDeath).ToList();
+        for (var i = 0; i < newEnemies.Count; i++)
         {
             Enemies[i].PlayTurn();
             await UniTask.WaitUntil(() => !Enemies[i].IsTakeTurn);
         }
         GameManager.Instance.SetGameState(GameManager.GameState.PlayerTurn);
+    }
+    public void ClearEnemy()
+    {
+        Enemies.ForEach(x => Destroy(x.gameObject));
+        Enemies.Clear();
     }
 }

@@ -39,7 +39,7 @@ public class CellManager : Singleton<CellManager>
         }
     }
 
-    private void ClearMap()
+    public void ClearMap()
     {
         CellList.ForEach(x => Destroy(x.gameObject));
         CellList.Clear();
@@ -215,6 +215,7 @@ public class CellManager : Singleton<CellManager>
         // TODO: Implement A* algorithm
         return new List<Cell>() { targetCell };
     }
+    
     
 #if UNITY_EDITOR
     [Button]
