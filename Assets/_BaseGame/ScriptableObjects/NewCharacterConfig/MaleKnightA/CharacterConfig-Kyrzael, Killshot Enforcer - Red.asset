@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4226ddf2685104c90cf1bec24b974e, type: 3}
+  m_Name: CharacterConfig-Kyrzael, Killshot Enforcer - Red
+  m_EditorClassIdentifier: 
+  <CharacterPreview>k__BackingField: {fileID: 21300000, guid: 12c64e07b220d6b4b8c91f2fc5c49b3d,
+    type: 3}
+  <CharacterName>k__BackingField: Kyrzael
+  <NickName>k__BackingField: Killshot Enforcer
+  <CharacterStar>k__BackingField: 5
+  <CharacterAttribute>k__BackingField: 0
+  <CharacterModel>k__BackingField: {fileID: 4259500605686969306, guid: d4bf537e50dafe5428ad163e9e6b99ea,
+    type: 3}
+  <CharacterIcon>k__BackingField: {fileID: 668163443, guid: 85b2fc8e385f3a542bac0ee1bbac3f5d,
+    type: 3}
+  <Profile>k__BackingField: Pitiful wretch. Do you not realize that you are less
+    than a piece of scrap? Just thinking does not bestow intelligence, but you are
+    too dull to realize that. You are a blight on society, and I, Kyrzael, as the
+    First Enforcer, will mete out your punishment.
+  <AttackDamage>k__BackingField: 140
+  <HitPoint>k__BackingField: 78
+  <CharacterChainCombo>k__BackingField:
+  - <ChainCount>k__BackingField: 4
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+      type: 2}
+  - <ChainCount>k__BackingField: 8
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+      type: 2}
+  <SkillConfig>k__BackingField: {fileID: 11400000, guid: 444fb93fb89f1244c94437c0be3d757b,
+    type: 2}

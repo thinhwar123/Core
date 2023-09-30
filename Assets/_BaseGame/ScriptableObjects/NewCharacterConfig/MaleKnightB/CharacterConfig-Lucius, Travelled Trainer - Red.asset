@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4226ddf2685104c90cf1bec24b974e, type: 3}
+  m_Name: CharacterConfig-Lucius, Travelled Trainer - Red
+  m_EditorClassIdentifier: 
+  <CharacterPreview>k__BackingField: {fileID: 21300000, guid: ca0cc057b4b38c94bbd49cd46f11ec08,
+    type: 3}
+  <CharacterName>k__BackingField: Lucius
+  <NickName>k__BackingField: Travelled Trainer
+  <CharacterStar>k__BackingField: 4
+  <CharacterAttribute>k__BackingField: 0
+  <CharacterModel>k__BackingField: {fileID: 7406200556204595911, guid: 32b3f2f62870c5147aa0506e141b2912,
+    type: 3}
+  <CharacterIcon>k__BackingField: {fileID: -1766018466, guid: 465ffbb4233de814bb1d45faf5315ae9,
+    type: 3}
+  <Profile>k__BackingField: '"I shall act as guide to those in need! Certainly, there
+    are others struggling to find their way, just as I once did."
+
+    And so, he
+    who wandered many walks of life saw that his true calling was not that of a knight,
+    but of a teacher.'
+  <AttackDamage>k__BackingField: 140
+  <HitPoint>k__BackingField: 78
+  <CharacterChainCombo>k__BackingField:
+  - <ChainCount>k__BackingField: 4
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+      type: 2}
+  - <ChainCount>k__BackingField: 8
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+      type: 2}
+  <SkillConfig>k__BackingField: {fileID: 11400000, guid: b2f60d16ffaa051458a7e06c24b88b61,
+    type: 2}
