@@ -29,7 +29,8 @@ namespace BaseGame
                 }
                 listMapCell[i].gameObject.SetActive(true);
                 listMapCell[i].SetMapData(listMapData[i]);
-                if (floor == 0 && i == 0&& MapDetailUI.GetInstance().CurCellSelect == null)
+                // if (floor == 0 && i == 0&& MapDetailUI.GetInstance().CurCellSelect == null)
+                if (floor == 0 && i == 0)
                     listMapCell[i].SelectMap();
             }
 

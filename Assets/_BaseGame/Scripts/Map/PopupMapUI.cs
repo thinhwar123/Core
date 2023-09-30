@@ -12,7 +12,7 @@ namespace BaseGame
         [SerializeField] MapAssetData masterAssetData;
         [Header("UI")]
         [SerializeField] List<MapTreeFloorUI> listMapTreeCell;
-        [SerializeField] MapDetailUI mapDetailUI;
+        //[SerializeField] MapDetailUI mapDetailUI;
         public bool isLoadingUI { set; get; }
 
         bool isLoadUI = false;
@@ -69,12 +69,13 @@ namespace BaseGame
 
         public void SelectMapCell(MapCellUI cellUI)
         {
-            mapDetailUI.SetMapData(cellUI);
+            //mapDetailUI.SetMapData(cellUI);
+            
         }
 
-        public MapDetailUI GetMapDetailUIForTut()
-        {
-            return mapDetailUI;
-        }
+        // public MapDetailUI GetMapDetailUIForTut()
+        // {
+        //     return mapDetailUI;
+        // }
     }
 }
