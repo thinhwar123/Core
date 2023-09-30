@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7445765640502748795
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4773,7 +4773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9622642, g: 0.49002182, b: 0.040850822, a: 1}
+  m_Color: {r: 0.26059094, g: 0.7822623, b: 0.9056604, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5038,6 +5038,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergySpread
       objectReference: {fileID: 0}
+    - target: {fileID: 1135269809934672090, guid: 5b66bf192a407472ba156c617e17ecb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1135269809934672164, guid: 5b66bf192a407472ba156c617e17ecb3,
         type: 3}
       propertyPath: _duration
@@ -5056,7 +5061,7 @@ PrefabInstance:
     - target: {fileID: 1135269809934672164, guid: 5b66bf192a407472ba156c617e17ecb3,
         type: 3}
       propertyPath: _bursts.Array.data[0].used
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1135269809934672164, guid: 5b66bf192a407472ba156c617e17ecb3,
         type: 3}
