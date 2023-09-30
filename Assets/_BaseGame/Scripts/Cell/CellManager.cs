@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using TW.Utility.DesignPattern;
@@ -17,12 +18,7 @@ public class CellManager : Singleton<CellManager>
     
     private Cell[,] Cells {get; set;}
 
-    private void Start()
-    {
-        CreateMap();
-    }
-
-    private void CreateMap()
+    public void CreateMap()
     {
         ClearDemoMap();
         Cells = new Cell[Column, Row];
@@ -50,7 +46,7 @@ public class CellManager : Singleton<CellManager>
     }
     
     
-    private Cell GetCell(int x, int y)
+    public Cell GetCell(int x, int y)
     {
         if (x < 0 || x >= Column || y < 0 || y >= Row) return null; 
         return Cells[x, y];
@@ -71,20 +67,20 @@ public class CellManager : Singleton<CellManager>
         }
         return result;
     }
-
+    
     private List<Cell> GetCellCross(int x, int y, int range)
     {
         List<Cell> result = new List<Cell>();
         for (int i = x - range; i <= x + range; i++)
         {
-            if (i == y) continue;
+            if (i == x) continue;
             Cell cell = GetCell(i, y);
             if (cell == null) continue;
             result.Add(cell);
         }
         for (int j = y - range; j <= y + range; j++)
         {
-            if (x == j) continue;
+            if (y == j) continue;
             Cell cell = GetCell(x, j);
             if (cell == null) continue;
             result.Add(cell);
@@ -111,6 +107,28 @@ public class CellManager : Singleton<CellManager>
         return result;
     }
 
+    private List<Cell> GetCellInRange(int x, int y, int range)
+    {
+        List<Cell> result = new List<Cell>();
+        for (int i = x - range; i <= x + range; i++)
+        {
+            for (int j = y - range; j <= y + range; j++)
+            {
+                if (i == x && j == y) continue;
+                if (Mathf.Abs(i - x) + Mathf.Abs(j - y) <= range)
+                {
+                    Cell cell = GetCell(i, j);
+                    if (cell == null) continue;
+                    result.Add(cell);
+                }
+            }
+        }
+        return result;
+    }
+    public List<Cell> GetCell(EAreaType areaType, Cell cell)
+    {
+        return GetCell(areaType, cell.XPosition, cell.YPosition);
+    }
     public List<Cell> GetCell(EAreaType areaType, int x, int y)
     {
         List<Cell> result = new List<Cell>();
@@ -141,7 +159,7 @@ public class CellManager : Singleton<CellManager>
                 result.AddRange(GetCellCross(x, y, 10));
                 break;
             case EAreaType.Area:
-                result = GetCellAround(x, y, 3);
+                result = GetCellInRange(x, y, 3);
                 break;
             case EAreaType.GlobalArea:
                 result = CellList;
@@ -164,6 +182,33 @@ public class CellManager : Singleton<CellManager>
     public void NormalAllCell()
     {
         CellList.ForEach(x => x.SetupNormal());
+    }
+
+    public async UniTask RecoverConsumedCell()
+    {
+        List<Cell> consumedCells = CellList.Where(x => x.IsConsumed && !x.IsCharacterCell).ToList();
+        Debug.Log(consumedCells.Count);
+        for (var i = 0; i < consumedCells.Count; i++)
+        {
+            Debug.Log(i);
+            consumedCells[i].RandomNewColor();
+            await UniTask.Delay(100);
+        }
+    }
+    
+    public void FocusListCell(List<Cell> cells)
+    {
+        CellList.ForEach(x =>
+        {
+            if (cells.Contains(x))
+            {
+                x.SetupFocus();
+            }
+            else
+            {
+                x.SetupUnSelect();
+            }
+        });
     }
     
 #if UNITY_EDITOR

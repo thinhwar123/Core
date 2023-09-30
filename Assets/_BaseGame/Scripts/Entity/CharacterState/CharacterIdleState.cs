@@ -39,12 +39,21 @@ public partial class Character : CharacterIdleState.IIdleStateHandler
 {
     public void OnIdleStateRequest()
     {
-        
+
     }
 
     public async UniTask OnIdleStateEnter(CancellationToken token)
     {
-        
+        IsIdle = true;
+        CharacterModel.OnIdleStateEnter();
+        if (IsLeader) 
+        {
+            CurrentCell.RegisterOwner(this);
+        }
+        else
+        {
+            SetHide(true);
+        }
     }
 
     public async UniTask OnIdleStateExecute(CancellationToken token)
@@ -54,6 +63,10 @@ public partial class Character : CharacterIdleState.IIdleStateHandler
 
     public async UniTask OnIdleStateExit(CancellationToken token)
     {
-        
+        IsIdle = false;
+        if (IsLeader) 
+        {
+            CurrentCell.UnRegisterOwner();
+        }
     }
 }

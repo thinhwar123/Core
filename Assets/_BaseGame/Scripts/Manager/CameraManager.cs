@@ -9,7 +9,6 @@ public class CameraManager : Singleton<CameraManager>
     [field: SerializeField] public Camera DefaultCamera {get; private set;}
     [field: SerializeField] public Camera FocusCamera {get; private set;}
     [field: SerializeField] public Transform CameraPivot {get; private set;}
-    [field: SerializeField] public LayerMask WhatIsCell {get; private set;}
     [field: SerializeField] public float SmoothTime {get; private set;}
     
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public float FocusZoom {get; private set;}
@@ -79,31 +78,15 @@ public class CameraManager : Singleton<CameraManager>
         IsFocus = false;
     }
 
-    public Vector3 GetCurrentFocusPosition()
+    private Vector3 GetCurrentFocusPosition()
     {
         Ray ray = FocusCamera.ScreenPointToRay(Input.mousePosition);
-        // if (Physics.Raycast(ray, out RaycastHit hitInfo,200, WhatIsCell))
-        // {
-        //     return hitInfo.point;
-        // }
-        if (GroundPlane.Raycast(ray, out float entry))
-        {
-            return ray.GetPoint(entry);
-        }
-        return Vector3.zero;
+        return GroundPlane.Raycast(ray, out float entry) ? ray.GetPoint(entry) : Vector3.zero;
     }
-    public Vector3 GetCurrentDefaultPosition()
+    private Vector3 GetCurrentDefaultPosition()
     {
         Ray ray = DefaultCamera.ScreenPointToRay(Input.mousePosition);
-        // if (Physics.Raycast(ray, out RaycastHit hitInfo,200, WhatIsCell))
-        // {
-        //     return hitInfo.point;
-        // }
-        if (GroundPlane.Raycast(ray, out float entry))
-        {
-            return ray.GetPoint(entry);
-        }
-        return Vector3.zero;
+        return GroundPlane.Raycast(ray, out float entry) ? ray.GetPoint(entry) : Vector3.zero;
     }
     
     private void UpdateMoveCamera()
