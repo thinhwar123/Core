@@ -72,6 +72,10 @@ public partial class Character : Entity
             UIHealthBar.SetupHealthBar(CharacterConfig.CharacterAttribute, Transform);
             UIHealthBar.UpdateValue(1);
         }
+        else
+        {
+            SetHide(true);
+        }
     }
     private async UniTask<float> GetAnimationDuration(string stateAnimationName, CancellationToken token){
         if (stateAnimationName == "") return 0;
