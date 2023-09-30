@@ -50,7 +50,7 @@ public partial class Character : CharacterComboState.IComboStateHandler
         if (IsLeader)
         {
             CharacterModel.OnIdleStateEnter();
-            await UniTask.WaitUntil(() => TeamManager.Instance.Characters.All(c => c.IsReadyCombo),
+            await UniTask.WaitUntil(() => TeamManager.Instance.Characters.All(c => c.IsReadyCombo || c.IsIdle),
                 cancellationToken: token);
             
         }

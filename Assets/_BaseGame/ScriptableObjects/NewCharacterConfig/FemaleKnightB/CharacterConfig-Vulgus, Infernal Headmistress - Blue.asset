@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4226ddf2685104c90cf1bec24b974e, type: 3}
+  m_Name: CharacterConfig-Vulgus, Infernal Headmistress - Blue
+  m_EditorClassIdentifier: 
+  <CharacterPreview>k__BackingField: {fileID: 21300000, guid: 030690a398aec8b45ab7b9950aff5814,
+    type: 3}
+  <CharacterName>k__BackingField: Vulgus
+  <NickName>k__BackingField: Infernal Headmistress
+  <CharacterStar>k__BackingField: 4
+  <CharacterAttribute>k__BackingField: 2
+  <CharacterModel>k__BackingField: {fileID: 9109138437093939302, guid: 34b9d18facf12e3428f41474a26def82,
+    type: 3}
+  <CharacterIcon>k__BackingField: {fileID: -839973013, guid: 7ef3776207031ea469b92c8f6dc56a58,
+    type: 3}
+  <Profile>k__BackingField: On my second day, the entire school seemed completely
+    different. And so did a face I thought I knew well, watching me from the headmistress's
+    office. Damn, Teach... not bad.
+  <AttackDamage>k__BackingField: 140
+  <HitPoint>k__BackingField: 78
+  <CharacterChainCombo>k__BackingField:
+  - <ChainCount>k__BackingField: 4
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+      type: 2}
+  - <ChainCount>k__BackingField: 8
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+      type: 2}
+  <SkillConfig>k__BackingField: {fileID: 11400000, guid: b6b94d78f8384cb4db2e76db98b4a20e,
+    type: 2}

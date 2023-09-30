@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4226ddf2685104c90cf1bec24b974e, type: 3}
+  m_Name: CharacterConfig-Magachiyo, Barbed Convict - Green
+  m_EditorClassIdentifier: 
+  <CharacterPreview>k__BackingField: {fileID: 21300000, guid: a80691c8e5e423d40b0bdaae29645559,
+    type: 3}
+  <CharacterName>k__BackingField: Magachiyo
+  <NickName>k__BackingField: Barbed Convict
+  <CharacterStar>k__BackingField: 5
+  <CharacterAttribute>k__BackingField: 1
+  <CharacterModel>k__BackingField: {fileID: 2085037548104484623, guid: 773c84b73f4c46244b381b9329f9c197,
+    type: 3}
+  <CharacterIcon>k__BackingField: {fileID: -1157729412, guid: f02df0f9796a5234c929a250cb90e0a8,
+    type: 3}
+  <Profile>k__BackingField: When the Verdant Ring was founded, our ancestors bid
+    me to grow it further, that I may "better slaughter our enemies." To be treated
+    liked a beast was a fate I couldn't permit for my son... And so I filled the
+    tree with my Crimson Incense, blotting out all life within.
+  <AttackDamage>k__BackingField: 140
+  <HitPoint>k__BackingField: 78
+  <CharacterChainCombo>k__BackingField:
+  - <ChainCount>k__BackingField: 4
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+      type: 2}
+  - <ChainCount>k__BackingField: 8
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+      type: 2}
+  <SkillConfig>k__BackingField: {fileID: 11400000, guid: 6093c40811f11fc48a2f6a7685aa0907,
+    type: 2}

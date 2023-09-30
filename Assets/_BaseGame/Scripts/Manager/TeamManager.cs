@@ -14,15 +14,16 @@ public class TeamManager : TW.Utility.DesignPattern.Singleton<TeamManager>
     
     [field: SerializeField] public Vector2Int StartPosition {get; private set;}
     [field: SerializeField] public List<Character> Characters { get; private set; } = new List<Character>();
-    
+    public Character Leader => Characters[0];
+
     public void InitTeam()
     {
         Characters.Clear();
-        Cell StatrCell = CellManager.Instance.GetCell(StartPosition.x, StartPosition.y);
+        Cell startCell = CellManager.Instance.GetCell(StartPosition.x, StartPosition.y);
         CharacterConfigs.ForEach((cf, i) =>
         {
-            Character character = Instantiate(CharacterPrefab, StatrCell.Transform.position, Quaternion.identity, Transform);
-            character.InitConfig(cf, i, StatrCell);
+            Character character = Instantiate(CharacterPrefab, startCell.Transform.position, Quaternion.identity, Transform);
+            character.InitConfig(cf, i, startCell);
             Characters.Add(character);
         });
     }
@@ -38,6 +39,25 @@ public class TeamManager : TW.Utility.DesignPattern.Singleton<TeamManager>
         await UniTask.WaitUntil(() => Characters.All(x => x.IsIdle));
         await CellManager.Instance.RecoverConsumedCell();
         
-        GameManager.Instance.SetGameState(GameManager.GameState.PlayerTurn);
+        if (EnemyManager.Instance.Enemies.All(e => e.IsDeath))
+        {
+            GameManager.Instance.OnWinGame();
+            return;
+        }
+
+        
+        GameManager.Instance.SetGameState(GameManager.GameState.EnemyTurn);
+        await EnemyManager.Instance.PlayEnemyTurn();
+        if (Leader.IsDeath)
+        {
+            GameManager.Instance.OnLoseGame();
+            return;
+        }
+
+    }
+    public void ClearTeam()
+    {
+        Characters.ForEach(x => Destroy(x.gameObject));
+        Characters.Clear();
     }
 }

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574333a4e95f4da40b4be7eee4fc6417, type: 3}
   m_Name: SkillConfig-AreaDamage-Green
   m_EditorClassIdentifier: 
-  <SkillIcon>k__BackingField: {fileID: 0}
+  <SkillIcon>k__BackingField: {fileID: 21300000, guid: d2abfb9e15ceea04a9a6236cbf9f7e3e,
+    type: 3}
   <SkillName>k__BackingField: Zephyr Gust
   <SkillType>k__BackingField: 5
   <SkillAttribute>k__BackingField: 1

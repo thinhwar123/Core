@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574333a4e95f4da40b4be7eee4fc6417, type: 3}
   m_Name: SkillConfig-SmallAreaConvert-Blue
   m_EditorClassIdentifier: 
-  <SkillIcon>k__BackingField: {fileID: 0}
+  <SkillIcon>k__BackingField: {fileID: 21300000, guid: c0eb63b2cb44032448ab28939d2c6e47,
+    type: 3}
   <SkillName>k__BackingField: Aqua Resonance
   <SkillType>k__BackingField: 0
   <SkillAttribute>k__BackingField: 2

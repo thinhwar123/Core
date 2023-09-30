@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4226ddf2685104c90cf1bec24b974e, type: 3}
+  m_Name: CharacterConfig-Midelo, Doug - Blue
+  m_EditorClassIdentifier: 
+  <CharacterPreview>k__BackingField: {fileID: 21300000, guid: cc6da93d6f0bfa24a91e306567a7336a,
+    type: 3}
+  <CharacterName>k__BackingField: Midelo
+  <NickName>k__BackingField: Doug
+  <CharacterStar>k__BackingField: 5
+  <CharacterAttribute>k__BackingField: 2
+  <CharacterModel>k__BackingField: {fileID: 1002733962749832698, guid: c26db7c80e36f804b972df4460d641b1,
+    type: 3}
+  <CharacterIcon>k__BackingField: {fileID: 683375033, guid: ef9686ae0b810484cad79641debbc47a,
+    type: 3}
+  <Profile>k__BackingField: "The seeker of truths heaved a heavy sigh, for all the
+    truths of this world were now known to him\u2014all but one. \"The final mystery,\"
+    he muttered to himself. \"Let us hope this 'box' hides more than banalities.\""
+  <AttackDamage>k__BackingField: 140
+  <HitPoint>k__BackingField: 78
+  <CharacterChainCombo>k__BackingField:
+  - <ChainCount>k__BackingField: 4
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+      type: 2}
+  - <ChainCount>k__BackingField: 8
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+      type: 2}
+  <SkillConfig>k__BackingField: {fileID: 11400000, guid: c9afe2b72da8c954aae6012db40c24e4,
+    type: 2}

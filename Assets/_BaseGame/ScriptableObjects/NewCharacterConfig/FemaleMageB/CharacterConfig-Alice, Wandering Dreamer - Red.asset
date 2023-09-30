@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4226ddf2685104c90cf1bec24b974e, type: 3}
+  m_Name: CharacterConfig-Alice, Wandering Dreamer - Red
+  m_EditorClassIdentifier: 
+  <CharacterPreview>k__BackingField: {fileID: 21300000, guid: 9af01b2f2138b6b4f8c29985250639ae,
+    type: 3}
+  <CharacterName>k__BackingField: Alice
+  <NickName>k__BackingField: Wandering Dreamer
+  <CharacterStar>k__BackingField: 4
+  <CharacterAttribute>k__BackingField: 0
+  <CharacterModel>k__BackingField: {fileID: 1390809489711839219, guid: 42d750bb50e0a144493284dfd3bd34dd,
+    type: 3}
+  <CharacterIcon>k__BackingField: {fileID: 1753675160, guid: fa0660e4f8a2c484aaa785f4baadf94f,
+    type: 3}
+  <Profile>k__BackingField: "Past, present, or future; no matter when I am, I'm always
+    me! If you keep one foot in front of the other, and never fear, you too can change
+    the world! Come, let's go on an adventure\u2014to a wondrous, far-off land!"
+  <AttackDamage>k__BackingField: 140
+  <HitPoint>k__BackingField: 78
+  <CharacterChainCombo>k__BackingField:
+  - <ChainCount>k__BackingField: 4
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+      type: 2}
+  - <ChainCount>k__BackingField: 8
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+      type: 2}
+  <SkillConfig>k__BackingField: {fileID: 11400000, guid: b2f60d16ffaa051458a7e06c24b88b61,
+    type: 2}

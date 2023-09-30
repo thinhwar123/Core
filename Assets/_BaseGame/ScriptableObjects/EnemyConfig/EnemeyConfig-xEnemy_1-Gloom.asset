@@ -21,7 +21,7 @@ MonoBehaviour:
   <EnemyIcon>k__BackingField: {fileID: 0}
   <Profile>k__BackingField: 
   <AttackDamage>k__BackingField: 50
-  <HitPoint>k__BackingField: 350
-  <MoveStep>k__BackingField: 2
+  <HitPoint>k__BackingField: 3865
+  <MoveStep>k__BackingField: 5
   <SkillConfig>k__BackingField: {fileID: 11400000, guid: c0613742bf78e334689f695c1a79376b,
     type: 2}
