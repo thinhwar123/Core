@@ -1349,8 +1349,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6309895083186809699}
   - component: {fileID: 6309895083186809698}
+  - component: {fileID: 916464896209845850}
+  - component: {fileID: 552730118399263475}
+  - component: {fileID: 8691254991473116809}
   m_Layer: 5
-  m_Name: MainMenu
+  m_Name: PopupMapUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1389,9 +1392,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 409d30c64644486d68b159ae0f5eab2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <AUIPanelConfig>k__BackingField: {fileID: 11400000, guid: 86aef9cc9fc439644b516fd683f8ba2f,
+    type: 2}
+  <CanvasGroup>k__BackingField: {fileID: 8691254991473116809}
+  <MainView>k__BackingField: {fileID: 3662398057918047007}
   masterAssetData: {fileID: 11400000, guid: e19d499d034925cb9bfd3ec7699c17d5, type: 2}
   listMapTreeCell:
   - {fileID: 6309895084811106067}
+--- !u!223 &916464896209845850
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6309895083186809696}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &552730118399263475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6309895083186809696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 119
+--- !u!225 &8691254991473116809
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6309895083186809696}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6309895083561609897
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Utils;
+using TW.UI.CustomComponent;
+using TW.Utility.CustomComponent;
 
 namespace BaseGame
 {
-    public class PopupMapUI : Singleton<PopupMapUI>
+    public class PopupMapUI : AUIPanel
     {
         [Header("Data")]
         [SerializeField] MapAssetData masterAssetData;
@@ -69,8 +71,9 @@ namespace BaseGame
 
         public void SelectMapCell(MapCellUI cellUI)
         {
-            //mapDetailUI.SetMapData(cellUI);
-            
+            GameManager.Instance.CreateMap(cellUI.MapDataModel.mapTree, cellUI.MapDataModel.mapID);
+            AUIManager.Instance.OpenUI<UIInGame>().SetupOnOpen(TeamManager.Instance.CharacterConfigs);
+            AUIManager.Instance.CloseUI<PopupMapUI>();
         }
 
         // public MapDetailUI GetMapDetailUIForTut()
