@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4226ddf2685104c90cf1bec24b974e, type: 3}
+  m_Name: CharacterConfig-Aria, Dutiful Fairy - Blue
+  m_EditorClassIdentifier: 
+  <CharacterPreview>k__BackingField: {fileID: 21300000, guid: ab18171e481f72948a1184ceff8df3ae,
+    type: 3}
+  <CharacterName>k__BackingField: Aria
+  <NickName>k__BackingField: Dutiful Fairy
+  <CharacterStar>k__BackingField: 4
+  <CharacterAttribute>k__BackingField: 2
+  <CharacterModel>k__BackingField: {fileID: 2085037548104484623, guid: 773c84b73f4c46244b381b9329f9c197,
+    type: 3}
+  <CharacterIcon>k__BackingField: {fileID: 1604057768, guid: 45ffb2a3073d89449a3ff7f6c81cc420,
+    type: 3}
+  <Profile>k__BackingField: "The dark forces writhe, hungering for the world's end.
+    Chosen hero, I've been waiting for you. Unite with the other chosen, and save
+    this world...\r"
+  <AttackDamage>k__BackingField: 140
+  <HitPoint>k__BackingField: 78
+  <CharacterChainCombo>k__BackingField:
+  - <ChainCount>k__BackingField: 4
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+      type: 2}
+  - <ChainCount>k__BackingField: 8
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+      type: 2}
+  <SkillConfig>k__BackingField: {fileID: 11400000, guid: 7365171469dd4e14fb0951b7ebf07625,
+    type: 2}
