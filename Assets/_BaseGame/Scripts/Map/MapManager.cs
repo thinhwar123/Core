@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Utils;
-using HLib.Jobs;
-using HLib.IO;
 using System.Linq;
 using TMPro;
 using UnityEngine.UI;
@@ -25,26 +23,27 @@ namespace BaseGame
 
         private void Start()
         {
-            StartCoroutine(IEGetData());
+            Reset();
+            // StartCoroutine(IEGetData());
         }
 
         #region Get Data
 
-        IEnumerator IEGetData()
-        {
-            yield return new WaitForEndOfFrame();
-            HJobs.Create();
-            listMapDBModel = HFile.LoadDataLocal<ListMapDBModel>();
-            if (listMapDBModel == null)
-                listMapDBModel = new ListMapDBModel();
-            if (listMapDBModel.listMapDBModel == null)
-                listMapDBModel.listMapDBModel = new List<MapDBModel>();
-            if (listMapDBModel.listMapDBModel.Count == 0)
-            {
-                Reset();
-            }
+        // IEnumerator IEGetData()
+        // {
+        //     yield return new WaitForEndOfFrame();
+        //     HJobs.Create();
+        //     listMapDBModel = HFile.LoadDataLocal<ListMapDBModel>();
+        //     if (listMapDBModel == null)
+        //         listMapDBModel = new ListMapDBModel();
+        //     if (listMapDBModel.listMapDBModel == null)
+        //         listMapDBModel.listMapDBModel = new List<MapDBModel>();
+        //     if (listMapDBModel.listMapDBModel.Count == 0)
+        //     {
+        //         Reset();
+        //     }
 
-        }
+        // }
 
         [ContextMenu("Reset")]
         /// <summary>
@@ -53,7 +52,7 @@ namespace BaseGame
         public void Reset()
         {
             Default();
-            Save();
+            //Save();
         }
 
         private void Default()
@@ -74,13 +73,13 @@ namespace BaseGame
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        public void Save()
-        {
-            HFile.SaveLocal<ListMapDBModel>(listMapDBModel);
-        }
+        // /// <summary>
+        // /// 
+        // /// </summary>
+        // public void Save()
+        // {
+        //     HFile.SaveLocal<ListMapDBModel>(listMapDBModel);
+        // }
 
         #endregion
 
