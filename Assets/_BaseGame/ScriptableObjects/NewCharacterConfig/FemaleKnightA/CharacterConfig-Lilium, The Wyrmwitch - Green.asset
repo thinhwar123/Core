@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   <CharacterName>k__BackingField: Lilium
   <NickName>k__BackingField: The Wyrmwitch
-  <CharacterStar>k__BackingField: 4
+  <CharacterStar>k__BackingField: 5
   <CharacterAttribute>k__BackingField: 1
   <CharacterModel>k__BackingField: {fileID: 6123009807578079876, guid: 561b310de8e210247a5a99b238058e6a,
     type: 3}
@@ -25,14 +25,14 @@ MonoBehaviour:
   <Profile>k__BackingField: I've been waiting for someone like you this entire time,
     you see. Someone willing to save her. To bring us closer to our happy ending.
     I trust you will play your part until all is over... dear Knight.
-  <AttackDamage>k__BackingField: 17
-  <HitPoint>k__BackingField: 655
+  <AttackDamage>k__BackingField: 57
+  <HitPoint>k__BackingField: 646
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4b97506ecd953544bab2ca0ce9ddbfd2,
       type: 2}
   - <ChainCount>k__BackingField: 8
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4960f987bf4aac749943bc64c4ac8b03,
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 7c1e9876d4b06a14eb7fefff5e6ae3c8,
       type: 2}
   <SkillConfig>k__BackingField: {fileID: 11400000, guid: f0b34e0c616fd9c4c9af6c0da5e55320,
     type: 2}

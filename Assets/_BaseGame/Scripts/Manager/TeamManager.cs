@@ -2,12 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
+using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class TeamManager : TW.Utility.DesignPattern.Singleton<TeamManager>
 {
+    [field: InlineEditor]
     [field: SerializeField] public List<CharacterConfig> CharacterConfigs { get; set; } = new List<CharacterConfig>();
     [field: SerializeField] public Character CharacterPrefab {get; private set;}
     [field: SerializeField] public float DelayMoveTime {get; private set;}

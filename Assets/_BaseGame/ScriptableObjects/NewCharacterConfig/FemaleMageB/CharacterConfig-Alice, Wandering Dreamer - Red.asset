@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   <CharacterName>k__BackingField: Alice
   <NickName>k__BackingField: Wandering Dreamer
-  <CharacterStar>k__BackingField: 4
+  <CharacterStar>k__BackingField: 5
   <CharacterAttribute>k__BackingField: 0
   <CharacterModel>k__BackingField: {fileID: 1390809489711839219, guid: 42d750bb50e0a144493284dfd3bd34dd,
     type: 3}

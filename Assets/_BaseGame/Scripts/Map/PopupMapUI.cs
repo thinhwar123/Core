@@ -10,6 +10,7 @@ namespace BaseGame
 {
     public class PopupMapUI : AUIPanel
     {
+        [field: SerializeField] private AUIButton GachaButton {get; set;}
         [Header("Data")]
         [SerializeField] MapAssetData masterAssetData;
         [Header("UI")]
@@ -19,7 +20,11 @@ namespace BaseGame
 
         bool isLoadUI = false;
         public bool isLoadData { set; get; }
-
+        protected override void Awake()
+        {
+            base.Awake();
+            GachaButton.OnClickButton.AddListener(OnClickGachaButton);
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -27,7 +32,10 @@ namespace BaseGame
             StartCoroutine(IELoadUI());
         }
 
-
+        private void OnClickGachaButton()
+        {
+            AUIManager.Instance.OpenUI<UIGachaWibu>().SetupOnOpen();
+        }
         IEnumerator IELoadUI()
         {
             isLoadUI = true;

@@ -30,7 +30,7 @@ public class CharacterConfig : ScriptableObject
     public string Profile { get; private set; }
     
     
-    [field: ProgressBar(10, 30, 1, 0.1f, 0.1f)]
+    [field: ProgressBar(10, 300, 1, 0.1f, 0.1f)]
     [field: SerializeField] public int AttackDamage { get; private set; }
     [field: ProgressBar(400, 800, 0.1f, 1f, 0.1f)]
     [field: SerializeField] public int HitPoint { get; private set; }

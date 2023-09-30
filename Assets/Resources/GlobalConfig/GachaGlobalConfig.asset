@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa7bdb27eda1354db746e247eb14806, type: 3}
+  m_Name: GachaGlobalConfig
+  m_EditorClassIdentifier: 
+  <CharacterConfigs>k__BackingField:
+  - {fileID: 11400000, guid: 1aaff2a7562bed845a48d637edbebd8e, type: 2}
+  - {fileID: 11400000, guid: a2356091681ae1c4d8eb8e98106eb658, type: 2}
+  - {fileID: 11400000, guid: 0bbcfc471d6a2d94594e8baddd6bdb84, type: 2}
+  - {fileID: 11400000, guid: 6c099aa1b0ecd2c489103f6fe2b1483c, type: 2}
+  - {fileID: 11400000, guid: ea2b708c436e25e49ab291df09fa3cd9, type: 2}
+  - {fileID: 11400000, guid: 4c91f075460644c4b9576b53242be27c, type: 2}
+  - {fileID: 11400000, guid: 49d17b14670173c40bafa6e382af1f0e, type: 2}
+  - {fileID: 11400000, guid: e57fbd03c28f59f418df71eb9ccd8126, type: 2}
+  - {fileID: 11400000, guid: 31c77747a905de54ab761a1eba328472, type: 2}
+  - {fileID: 11400000, guid: 4bd81c211d86fa646a9cb829b02da717, type: 2}
+  - {fileID: 11400000, guid: aebc2fec3cbf74a4b91534561d54dbe4, type: 2}
+  - {fileID: 11400000, guid: adaa99706fa884b46b128b0d1731cfad, type: 2}
+  - {fileID: 11400000, guid: c298d14908d6d9a49b39f08431b95715, type: 2}
+  - {fileID: 11400000, guid: cd4cb19f8ccd29d45ac312d68ee377e2, type: 2}
+  - {fileID: 11400000, guid: 1ac049ed67818634790964b9986b02d8, type: 2}
+  - {fileID: 11400000, guid: 8d212d4766e829a4dbef5fe24a416a0f, type: 2}
+  - {fileID: 11400000, guid: f0a4848a53271824dba080d330cd7ee2, type: 2}
+  - {fileID: 11400000, guid: 53c3dcf121b2a4d45a55b2a72d3877de, type: 2}
+  - {fileID: 11400000, guid: 4c1804a2aa606e74fac9f61eb5e06fe8, type: 2}
+  - {fileID: 11400000, guid: bf38de649fb42df438ba6d9e49db8985, type: 2}
+  - {fileID: 11400000, guid: 7a7093f281b1eb64eaab2da9c5b7a9ae, type: 2}
+  - {fileID: 11400000, guid: f137506c256754149933a21f6b128452, type: 2}
+  - {fileID: 11400000, guid: d3ee7c1ef11b9694bac190f1f3fdbcde, type: 2}
+  - {fileID: 11400000, guid: 304582655673819498c101429752ebd3, type: 2}
+  - {fileID: 11400000, guid: d1dad55ad69b6014d80544ad033bb171, type: 2}
+  - {fileID: 11400000, guid: e8887836107ccf744ada8aaeaa95aa07, type: 2}
+  - {fileID: 11400000, guid: bfc6bd703f57e6c41a6fcfd6144265e6, type: 2}
+  - {fileID: 11400000, guid: c3090cdf6cc93a4499f4d6a1551ec765, type: 2}
+  - {fileID: 11400000, guid: 2d90221b8bdd5d1409c34b592b875fe8, type: 2}
+  - {fileID: 11400000, guid: 9eb9533c91933a44bbab174e449c656b, type: 2}
+  - {fileID: 11400000, guid: 5a649513033c94d4cb066acb1e3e4fe4, type: 2}
+  - {fileID: 11400000, guid: b6b7636a51a03dc4dbb75ca38b434499, type: 2}
+  - {fileID: 11400000, guid: 0fd82663f1d2327409e7e9ab78d1c374, type: 2}
+  - {fileID: 11400000, guid: 69ad89ad87d818b4d927f381770e28f1, type: 2}
+  - {fileID: 11400000, guid: 950d08f1e1d378743838a0fd1cb88653, type: 2}
+  - {fileID: 11400000, guid: 65aaaa151b5517644b4ac30a495330dc, type: 2}
+  - {fileID: 11400000, guid: 4f0631b20b31e7c4f8e81d31c7288c7e, type: 2}
+  - {fileID: 11400000, guid: ce53881d5a77bb04a9dc515460b79b5f, type: 2}
+  - {fileID: 11400000, guid: e239c7d14fe103c42ab9818a1f7067b8, type: 2}
+  - {fileID: 11400000, guid: ab16b3224fca1104cac882a8259da568, type: 2}
+  - {fileID: 11400000, guid: 289553f76359ed24cbab495f85ce1afe, type: 2}
+  - {fileID: 11400000, guid: 504f018a71a9d9143abfc33cc7f35f08, type: 2}
+  - {fileID: 11400000, guid: 8b6e16d3351c4a9458e6433caad6b856, type: 2}
+  - {fileID: 11400000, guid: f519c297af0775b4199060f5022c4357, type: 2}
+  - {fileID: 11400000, guid: ca8f8217e9ff51643951af09980d1f34, type: 2}
+  - {fileID: 11400000, guid: 509dbd2179cec3149b309631950ef26d, type: 2}
+  - {fileID: 11400000, guid: aab6025dfd7591a4d94fa04f7b441403, type: 2}
+  - {fileID: 11400000, guid: 93758945dd187a640bbe29eab3c9cad4, type: 2}
+  <GachaRate>k__BackingField:
+    m_ProbabilityValueList:
+    - m_Object: 3
+      m_Chance: 60
+      m_Percentage: 60
+    - m_Object: 4
+      m_Chance: 30
+      m_Percentage: 30
+    - m_Object: 5
+      m_Chance: 10
+      m_Percentage: 10

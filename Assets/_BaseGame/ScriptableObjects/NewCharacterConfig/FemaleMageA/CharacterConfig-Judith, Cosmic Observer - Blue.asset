@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   <CharacterName>k__BackingField: Judith
   <NickName>k__BackingField: Cosmic Observer
-  <CharacterStar>k__BackingField: 4
+  <CharacterStar>k__BackingField: 5
   <CharacterAttribute>k__BackingField: 2
   <CharacterModel>k__BackingField: {fileID: 4955687745062647021, guid: 0c85d58cd0f1394449f1c44dd02212d3,
     type: 3}
@@ -25,14 +25,14 @@ MonoBehaviour:
   <Profile>k__BackingField: In the great play that is life, the script is written
     by the actors. With a smile on her face, she watches them play their parts, clutching
     plushies of them to her chest as she cheers them on.
-  <AttackDamage>k__BackingField: 16
-  <HitPoint>k__BackingField: 700
+  <AttackDamage>k__BackingField: 58
+  <HitPoint>k__BackingField: 731
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: d936669858a384948a3fb08d54b33b0e,
       type: 2}
   - <ChainCount>k__BackingField: 8
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 7c1e9876d4b06a14eb7fefff5e6ae3c8,
       type: 2}
   <SkillConfig>k__BackingField: {fileID: 11400000, guid: c9afe2b72da8c954aae6012db40c24e4,
     type: 2}

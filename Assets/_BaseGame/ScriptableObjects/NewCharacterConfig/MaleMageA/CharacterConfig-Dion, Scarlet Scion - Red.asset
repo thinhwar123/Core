@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   <CharacterName>k__BackingField: Dion
   <NickName>k__BackingField: Scarlet Scion
-  <CharacterStar>k__BackingField: 4
+  <CharacterStar>k__BackingField: 5
   <CharacterAttribute>k__BackingField: 0
   <CharacterModel>k__BackingField: {fileID: 1002733962749832698, guid: c26db7c80e36f804b972df4460d641b1,
     type: 3}
@@ -25,14 +25,17 @@ MonoBehaviour:
   <Profile>k__BackingField: Mother and Father always said to spread love and kindness.
     I've been giving compliments and flowers to everyone I meet at Dranz, but...
     I didn't expect quite so many people to reciprocate!
-  <AttackDamage>k__BackingField: 23
-  <HitPoint>k__BackingField: 595
+  <AttackDamage>k__BackingField: 62
+  <HitPoint>k__BackingField: 800
   <CharacterChainCombo>k__BackingField:
-  - <ChainCount>k__BackingField: 3
+  - <ChainCount>k__BackingField: 2
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
       type: 2}
-  - <ChainCount>k__BackingField: 7
-    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 4b97506ecd953544bab2ca0ce9ddbfd2,
+  - <ChainCount>k__BackingField: 5
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 7c1e9876d4b06a14eb7fefff5e6ae3c8,
+      type: 2}
+  - <ChainCount>k__BackingField: 8
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: aad8d8ca8a3cc0648af5bb75e550acda,
       type: 2}
   <SkillConfig>k__BackingField: {fileID: 11400000, guid: 773e8cb47a3a5c64e9c2f135666cfb0c,
     type: 2}
