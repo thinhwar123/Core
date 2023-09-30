@@ -25,8 +25,8 @@ MonoBehaviour:
   <Profile>k__BackingField: To defeat the New Order, I have to collect the fragments
     that will revive the chosen one. I'm the only one who can... And I'll do it,
     to protect the people I love.
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 20
+  <HitPoint>k__BackingField: 200
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

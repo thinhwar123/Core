@@ -25,8 +25,8 @@ MonoBehaviour:
   <Profile>k__BackingField: The twilight came, heralding Ragnarok. The Valkyries
     fought bravely, though the end had arrived before the ordained hour. In their
     death throes, anguished voices pled for divine aid... but none was forthcoming.
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 23
+  <HitPoint>k__BackingField: 140
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

@@ -25,8 +25,8 @@ MonoBehaviour:
   <Profile>k__BackingField: "The seeker of truths heaved a heavy sigh, for all the
     truths of this world were now known to him\u2014all but one. \"The final mystery,\"
     he muttered to himself. \"Let us hope this 'box' hides more than banalities.\""
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 27
+  <HitPoint>k__BackingField: 171
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

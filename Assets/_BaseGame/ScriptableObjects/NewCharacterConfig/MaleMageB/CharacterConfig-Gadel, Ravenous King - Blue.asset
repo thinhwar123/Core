@@ -25,8 +25,8 @@ MonoBehaviour:
   <Profile>k__BackingField: The Cay of Calamity was but one of the New Order's weapons.
     Cursed to a fate of unsatiable hunger, the young king led his people on a path
     of feverish gluttony.
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 17
+  <HitPoint>k__BackingField: 146
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

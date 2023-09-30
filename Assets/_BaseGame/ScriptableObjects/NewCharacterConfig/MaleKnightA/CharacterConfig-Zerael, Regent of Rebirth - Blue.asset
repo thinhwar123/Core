@@ -26,8 +26,8 @@ MonoBehaviour:
     its beauty... How can fools claim this is but one side of man's ambition? It
     must not be permitted... I shall ascend to godhood and transform this world into
     a paradise, bereft of sin. Let the purification begin."
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 24
+  <HitPoint>k__BackingField: 136
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

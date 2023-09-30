@@ -25,8 +25,8 @@ MonoBehaviour:
   <Profile>k__BackingField: "Gahaha! Me, one of the chosen? I ain't one for sailin'
     under someone else's colors\u2014that's more cargo than I'm willing to hold.
     But if the crew be trustworthy, then I could be persuaded to weigh anchor!"
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 30
+  <HitPoint>k__BackingField: 165
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

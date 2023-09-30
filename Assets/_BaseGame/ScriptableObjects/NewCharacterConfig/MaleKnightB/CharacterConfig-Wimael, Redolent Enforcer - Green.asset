@@ -26,8 +26,8 @@ MonoBehaviour:
     for without it, all is chaos. Roots and weeds that do not know their place grow
     wild in anarchic fervor... Why do you not see, the path you seek to carve out
     is barren? I, Wimael, will punish this sullied sinner.
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 23
+  <HitPoint>k__BackingField: 184
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

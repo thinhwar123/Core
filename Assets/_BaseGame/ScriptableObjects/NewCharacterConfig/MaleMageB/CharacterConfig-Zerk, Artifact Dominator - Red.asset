@@ -25,8 +25,8 @@ MonoBehaviour:
   <Profile>k__BackingField: You're all under my control... and yet some of you rebel.
     I won't hold it against you, but giving in will make things so much easier. I
     won't let anyone stand in my way. I swore I would do anything for her.
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 22
+  <HitPoint>k__BackingField: 145
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

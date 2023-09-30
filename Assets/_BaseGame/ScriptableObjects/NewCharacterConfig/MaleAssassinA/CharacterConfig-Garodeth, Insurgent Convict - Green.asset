@@ -26,8 +26,8 @@ MonoBehaviour:
     We're birds living in a cage, but I refuse to sing for our "masters." The only
     thing tying me down is the ambition that I chose to see through. Pull down the
     moon and drench it in blood, Wyrmbreaker!
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 23
+  <HitPoint>k__BackingField: 130
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

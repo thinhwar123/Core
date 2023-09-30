@@ -25,8 +25,8 @@ MonoBehaviour:
   <Profile>k__BackingField: When we were controlled by animus, the chosen one gave
     us a way out. Deep within the darkness, they were our shining beacon of hope.
     We can't afford to lose them here!
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 13
+  <HitPoint>k__BackingField: 164
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

@@ -25,8 +25,8 @@ MonoBehaviour:
   <Profile>k__BackingField: "They say one of the nighttimer teachers is the Grim
     Reaper herself. Pass her test, and you graduate. From Mephismaze. From this world.
     And once you move on, there's no coming back.\r"
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 24
+  <HitPoint>k__BackingField: 134
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

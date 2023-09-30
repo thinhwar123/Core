@@ -25,8 +25,8 @@ MonoBehaviour:
   <Profile>k__BackingField: Mother and Father always said to spread love and kindness.
     I've been giving compliments and flowers to everyone I meet at Dranz, but...
     I didn't expect quite so many people to reciprocate!
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 23
+  <HitPoint>k__BackingField: 142
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

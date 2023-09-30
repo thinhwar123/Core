@@ -25,8 +25,8 @@ MonoBehaviour:
   <Profile>k__BackingField: "Everything's turned to ice. We've never had blizzards
     like this before... Not even my sister knows what to do... Are the bad guys going
     to win?\r"
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 25
+  <HitPoint>k__BackingField: 175
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,

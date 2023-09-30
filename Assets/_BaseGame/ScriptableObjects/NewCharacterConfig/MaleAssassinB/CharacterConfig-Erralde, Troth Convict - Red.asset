@@ -26,8 +26,8 @@ MonoBehaviour:
     chains of faith and trust in a higher power\u2014unneeded and unworthy of devotion.
     I shall break the wings of the angels themselves and throw them down to earth.
     Then shall I brand them with the mark of Juratio."
-  <AttackDamage>k__BackingField: 140
-  <HitPoint>k__BackingField: 78
+  <AttackDamage>k__BackingField: 16
+  <HitPoint>k__BackingField: 161
   <CharacterChainCombo>k__BackingField:
   - <ChainCount>k__BackingField: 4
     <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
