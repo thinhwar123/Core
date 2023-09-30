@@ -103,7 +103,7 @@ namespace BaseGame
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
                 line.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 RectTransform lineRect = line.GetComponent<RectTransform>();
-                lineRect.sizeDelta = new Vector2(lineRect.sizeDelta.x, direction.magnitude);
+                lineRect.sizeDelta = new Vector2(lineRect.sizeDelta.x, direction.magnitude * 1.5f);
                 line.gameObject.SetActive(true);
             }
             mapDBModel.numbSlotUnlock = numbUnlock;
