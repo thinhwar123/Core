@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574333a4e95f4da40b4be7eee4fc6417, type: 3}
   m_Name: SkillConfig-BigAreaConvert-Green
   m_EditorClassIdentifier: 
-  <SkillIcon>k__BackingField: {fileID: 0}
+  <SkillIcon>k__BackingField: {fileID: 21300000, guid: 1dce61aef6a4cc040b27dcdd9aaeece8,
+    type: 3}
   <SkillName>k__BackingField: Tempest Bloom
   <SkillType>k__BackingField: 2
   <SkillAttribute>k__BackingField: 1

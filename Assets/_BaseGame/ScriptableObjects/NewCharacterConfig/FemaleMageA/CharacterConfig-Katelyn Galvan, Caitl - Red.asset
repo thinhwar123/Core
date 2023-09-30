@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4226ddf2685104c90cf1bec24b974e, type: 3}
+  m_Name: CharacterConfig-Katelyn Galvan, Caitl - Red
+  m_EditorClassIdentifier: 
+  <CharacterPreview>k__BackingField: {fileID: 21300000, guid: 680761f6829721b45816ece2b22000a3,
+    type: 3}
+  <CharacterName>k__BackingField: Katelyn Galvan
+  <NickName>k__BackingField: Caitl
+  <CharacterStar>k__BackingField: 5
+  <CharacterAttribute>k__BackingField: 0
+  <CharacterModel>k__BackingField: {fileID: 4955687745062647021, guid: 0c85d58cd0f1394449f1c44dd02212d3,
+    type: 3}
+  <CharacterIcon>k__BackingField: {fileID: 21300000, guid: 55b80967a9d360249931e66075862406,
+    type: 3}
+  <Profile>k__BackingField: I'm the heir apparent to the queen? What does that even
+    mean? All I know is I like it here in this castle! As long as Veight and my bloodkin
+    can be by my side, that's all that matters!
+  <AttackDamage>k__BackingField: 140
+  <HitPoint>k__BackingField: 78
+  <CharacterChainCombo>k__BackingField:
+  - <ChainCount>k__BackingField: 4
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: db716d5ce97dbe44f819d4d00962df01,
+      type: 2}
+  - <ChainCount>k__BackingField: 8
+    <ChainComboConfig>k__BackingField: {fileID: 11400000, guid: 09796a138a85fcf4a9cdea4d09487594,
+      type: 2}
+  <SkillConfig>k__BackingField: {fileID: 11400000, guid: 773e8cb47a3a5c64e9c2f135666cfb0c,
+    type: 2}
