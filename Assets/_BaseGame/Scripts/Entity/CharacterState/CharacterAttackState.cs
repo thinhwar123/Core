@@ -53,6 +53,7 @@ public partial class Character : CharacterAttackState.IAttackStateHandler
     {
         for (int i = 0; i < AroundEnemies.Count; i++)
         {
+            Debug.Log(AroundEnemies[i].GetInstanceID());
             TargetEnemy = AroundEnemies[i];
             
             RotateTween?.Kill();
@@ -63,6 +64,10 @@ public partial class Character : CharacterAttackState.IAttackStateHandler
             // wait for animation complete
             float duration  = await GetAnimationDuration("attack", token);
             await UniTask.Delay((int) (duration * 1000), cancellationToken: token);
+            if (i < AroundEnemies.Count - 1)
+            {
+                CharacterModel.OnIdleStateEnter();
+            }
         }
         StateMachine.RequestTransition(CharacterMoveState.Instance);
     }

@@ -41,7 +41,7 @@ public partial class Enemy : EnemyAttackState.IAttackStateHandler
 {
     public void OnAttackStateRequest()
     {
-        
+        TargetCharacter = AroundCells.First(c => c.IsCharacterCell).Owner as Character;
     }
 
     public async UniTask OnAttackStateEnter(CancellationToken token)
@@ -51,14 +51,15 @@ public partial class Enemy : EnemyAttackState.IAttackStateHandler
 
     public async UniTask OnAttackStateExecute(CancellationToken token)
     {
-        TargetCharacter = AroundCells.First(c => c.IsCharacterCell).Owner as Character;
+
         
             
         RotateTween?.Kill();
         float rotateDuration = Vector3.Angle(Transform.forward, TargetCharacter.Transform.position - Transform.position) / RotateSpeed;
         RotateTween = Transform.DORotateQuaternion(Quaternion.LookRotation(TargetCharacter.Transform.position - Transform.position), rotateDuration).SetEase(Ease.Linear);
         await UniTask.Delay((int) (rotateDuration * 1000), cancellationToken: token);
-        
+
+        Debug.Log(TargetCharacter == null);
         EnemyModel.OnAttackStateEnter();
         // wait for animation complete
         float duration  = await GetAnimationDuration("attack", token);

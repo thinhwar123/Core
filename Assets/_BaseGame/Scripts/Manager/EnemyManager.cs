@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using TW.Utility.DesignPattern;
 using TW.Utility.Extension;
 using UnityEngine;
+using Sirenix.Utilities;
 
 public class EnemyManager : Singleton<EnemyManager>
 {
@@ -14,22 +15,41 @@ public class EnemyManager : Singleton<EnemyManager>
     public void InitDemoEnemy()
     {
         Enemies.Clear();
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 3; i++)
         {
             Cell randomCell = CellManager.Instance.CellList
                 .Where(c => c.CurrentState != Cell.State.Hide && !c.IsEnemyCell && !c.IsCharacterCell)
                 .GetRandomElement();
-            Enemy enemy = CreateEnemy(randomCell);
+            Enemy enemy = CreateEnemy(randomCell, i);
             Enemies.Add(enemy);
         }
     }
 
-    public Enemy CreateEnemy(Cell cell)
+    public void InitEnemy(List<BaseGame.EnemyConfig> enemyConfigs, List<Cell> cellPositions)
+    {
+        Enemies.Clear();
+        enemyConfigs.ForEach((cf, i) =>
+        {
+            Enemy enemy = CreateEnemy(cellPositions[i], cf.enemyID, cf.hp, cf.atk);
+            Enemies.Add(enemy);
+        });
+    }
+    public Enemy CreateEnemy(Cell cell, int index )
     {
         Cell startCell = cell;
         Enemy enemy = Instantiate(EnemyPrefab, startCell.Transform.position, Quaternion.identity, Transform);
-        enemy.InitConfig(EnemyGlobalConfig.Instance.GetEnemyConfig(0), startCell);
+        enemy.InitConfig(EnemyGlobalConfig.Instance.GetEnemyConfig(index), startCell);
         startCell.RegisterOwner(enemy);
+        return enemy;
+    }
+    
+    public Enemy CreateEnemy(Cell cell, int index, int defaultHitPoint, int defaultAttackDamage)
+    {
+        Cell startCell = cell;
+        Enemy enemy = Instantiate(EnemyPrefab, startCell.Transform.position, Quaternion.identity, Transform);
+        enemy.InitConfig(EnemyGlobalConfig.Instance.GetEnemyConfig(index), startCell);
+        enemy.OverrideConfig(defaultHitPoint, defaultAttackDamage);
+
         return enemy;
     }
         

@@ -54,10 +54,11 @@ public partial class Enemy : EnemyMoveState.IMoveStateHandler
     {
         if (CurrentMoveIndex >= CellPath.Count)
         {
-            AroundCells = CurrentCell.GetCell(EAreaType.SmallCross);
+            AroundCells = CurrentCell.GetCell(EAreaType.SmallArea);
             if (AroundCells.Any(c => c.IsCharacterCell))
             {
                 StateMachine.RequestTransition(EnemyAttackState.Instance);
+                return;
             }
 
             IsTakeTurn = false;

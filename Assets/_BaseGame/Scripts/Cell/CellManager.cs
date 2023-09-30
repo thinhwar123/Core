@@ -52,6 +52,10 @@ public class CellManager : Singleton<CellManager>
         return Cells[x, y];
     }
 
+    public Cell GetCell(int index)
+    {
+        return Cells[index % Column, index / Column];
+    }
     private List<Cell> GetCellAround(int x, int y, int range)
     {
         List<Cell> result = new List<Cell>();
@@ -170,7 +174,6 @@ public class CellManager : Singleton<CellManager>
         //remove duplicate elements and input elements and return
         return result.Distinct().ToList();
     }
-    
     public void DeActiveAllOtherCell(EAttribute selectAttribute)
     {
         CellList.Where(x => x.CellAttribute != selectAttribute).ForEach(x => x.SetupUnSelect());
@@ -183,7 +186,6 @@ public class CellManager : Singleton<CellManager>
     {
         CellList.ForEach(x => x.SetupNormal());
     }
-
     public async UniTask RecoverConsumedCell()
     {
         List<Cell> consumedCells = CellList.Where(x => x.IsConsumed && !x.IsCharacterCell).ToList();

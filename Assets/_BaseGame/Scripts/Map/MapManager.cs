@@ -14,7 +14,8 @@ namespace BaseGame
 {
     public class MapManager : Singleton<MapManager>
     {
-        [Header("Data")] [SerializeField] MapAssetData mapAssetData;
+        [field: Header("Data")]
+        [field: SerializeField] public MapAssetData mapAssetData { get; private set; }
         [SerializeField] GameObject notifiMap;
 
         [HideInInspector] public bool isLoadData = false;

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
@@ -13,12 +14,13 @@ public partial class Enemy : Entity
     [field: SerializeField]private float MovementSpeed { get; set; }
     [field: SerializeField] public float RotateSpeed {get; private set;}
     [field: SerializeField] public Cell CurrentCell {get; private set;}
+    [field: SerializeField] public int MaxHitPoint {get; private set;}
     [field: SerializeField] public int HitPoint {get; private set;}
     [field: SerializeField] public int AttackDamage {get; private set;}
+    
     [field: SerializeField, StateMachineDebug] UniTaskStateMachine<Enemy> StateMachine {get; set;} 
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public Animator Animator {get; private set;}
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] private EnemyModel EnemyModel {get; set;}
-    [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] private Character CharacterTarget {get; set;}
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] public List<Cell> AroundCells {get; private set;}
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] private List<Cell> CellPath {get; set;}
     [field: SerializeField, ReadOnly, FoldoutGroup("Debug")] private Character TargetCharacter {get; set;}
@@ -39,6 +41,7 @@ public partial class Enemy : Entity
         CurrentCell = startCell;
         EnemyModel = Instantiate(EnemyConfig.EnemyModel, EnemyModelContainer);
         Animator = EnemyModel.Animator;
+        MaxHitPoint = EnemyConfig.HitPoint;
         HitPoint = EnemyConfig.HitPoint;
         AttackDamage = EnemyConfig.AttackDamage;
 
@@ -47,7 +50,19 @@ public partial class Enemy : Entity
         UIHealthBar = GameManager.Instance.CreateUIHealthBar();
         UIHealthBar.SetupHealthBar(EAttribute.White, Transform);
         UIHealthBar.UpdateValue(1);
+
+        InitTriggerAction();
+        
+        CurrentCell.RegisterOwner(this);
     }
+    
+    public void OverrideConfig(int newHitPoint, int newAttackDamage)
+    {
+        MaxHitPoint = newHitPoint;
+        HitPoint = newHitPoint;
+        AttackDamage = newAttackDamage;
+    }
+
 
     private void InitStateMachine()
     {
@@ -66,7 +81,7 @@ public partial class Enemy : Entity
     public override void OnAttack()
     {
         base.OnAttack();
-        CharacterTarget.OnDamage(AttackDamage);
+        TargetCharacter.OnDamage(AttackDamage);
     }
 
     public override void OnDamage(int damage)
@@ -74,7 +89,7 @@ public partial class Enemy : Entity
         base.OnDamage(damage);
         HitPoint -= damage;
         if (HitPoint < 0) HitPoint = 0;
-        UIHealthBar.UpdateValue(HitPoint / (float) EnemyConfig.HitPoint);
+        UIHealthBar.UpdateValue(HitPoint / (float) MaxHitPoint);
         UIDamagePopup damagePopup = GameManager.Instance.CreateUIDamagePopup();
         damagePopup.SetupDamagePopup(damage, Transform);
     }
@@ -82,7 +97,7 @@ public partial class Enemy : Entity
     public override void OnCombo()
     {
         base.OnCombo();
-        CharacterTarget.OnDamage(AttackDamage);
+        TargetCharacter.OnDamage(AttackDamage);
     }
 
     public override void OnActive()
@@ -93,7 +108,8 @@ public partial class Enemy : Entity
     public void PlayTurn()
     {
         IsTakeTurn = true;
-        List<Cell> moveAbleCells = CellManager.Instance.GetCellInRange(CurrentCell.XPosition, CurrentCell.YPosition, EnemyConfig.MoveStep);
+        List<Cell> moveAbleCells = CellManager.Instance.GetCellInRange(CurrentCell.XPosition, CurrentCell.YPosition, EnemyConfig.MoveStep)
+            .Where(c => !c.IsCharacterCell && !c.IsEnemyCell && c.CurrentState != Cell.State.Hide).ToList();
         
         Cell targetCell = null; 
         float minDistance = float.MaxValue;

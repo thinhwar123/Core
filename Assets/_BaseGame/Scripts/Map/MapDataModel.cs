@@ -111,7 +111,7 @@ namespace BaseGame
         public void CopyFromOther(MapArea other)
         {
             if (AreaPosition == null){
-                AreaPosition = new int[49];
+                AreaPosition = new int[100];
             }
             for (int i = 0; i < other.AreaPosition.Length;i++){
                 AreaPosition[i] = other.AreaPosition[i];
