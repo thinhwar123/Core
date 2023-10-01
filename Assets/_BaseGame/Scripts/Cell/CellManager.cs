@@ -20,7 +20,7 @@ public class CellManager : Singleton<CellManager>
 
     public void CreateMap()
     {
-        ClearDemoMap();
+        ClearMap();
         Cells = new Cell[Column, Row];
         for (int i = 0; i < Column; i++)
         {
