@@ -32,7 +32,10 @@ public class UIHealthBar : AwaitableCachedMonoBehaviour
     
     public void Update()
     {
-        if (Target == null) return;
+        if (Target == null) {
+            Destroy(gameObject);
+            return;
+            }
         Transform.position =  CameraManager.Instance.MainCamera.WorldToScreenPoint(Target.position + Offset);
     }
     

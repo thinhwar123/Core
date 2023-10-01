@@ -1,4 +1,4 @@
-
+#if UNITY_EDITOR
 
 using UnityEngine;
 using UnityEditor;
@@ -62,3 +62,4 @@ namespace BaseGame.Editor
     }
 
 }
+#endif

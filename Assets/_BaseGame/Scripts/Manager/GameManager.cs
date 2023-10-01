@@ -3,6 +3,7 @@ using System.Linq;
 using BaseGame;
 using TW.Utility.DesignPattern;
 using UnityEngine;
+using Sirenix.Utilities;
 using TW.UI.CustomComponent;
 using TW.Utility.Extension;
 
@@ -20,6 +21,7 @@ public class GameManager : Singleton<GameManager>
     [field: SerializeField] public UIDamagePopup UIDamagePopupPrefab {get; private set;}
     [field: SerializeField] public Transform UIInGameContainer {get; private set;}
     [field: SerializeField] public GameState CurrentGameState {get; private set;}
+    private MapDataModel dataModel;
     
     private void Start()
     {
@@ -33,6 +35,7 @@ public class GameManager : Singleton<GameManager>
         
         // MapDBModel mapDBModel = MapManager.Instance.ListMapDBModel.listMapDBModel.First(x => x.treeFloor == treeFloor && x.id == mapId);
         MapDataModel mapDataModel = MapManager.Instance.mapAssetData.listMapDataModel.First(x => x.mapID == mapId && x.mapTree == treeFloor);
+        dataModel = mapDataModel;
         CellManager.Instance.CreateMap();
 
         List<BaseGame.EnemyConfig> listEnemy = mapDataModel.listMapDetailModel[0].listEnemy;
@@ -72,17 +75,15 @@ public class GameManager : Singleton<GameManager>
     {
         Debug.Log("Win Game");
         ClearAllMap();
-        SetGameState(GameManager.GameState.SelectLevel);
+        AUIManager.Instance.OpenUI<UIResult>().SetupOnOpen(true);
         AUIManager.Instance.CloseUI<UIInGame>();
-        AUIManager.Instance.OpenUI<PopupMapUI>();
     }
     public void OnLoseGame()
     {
         Debug.Log("Lose Game");
         ClearAllMap();
-        SetGameState(GameManager.GameState.SelectLevel);
+        AUIManager.Instance.OpenUI<UIResult>().SetupOnOpen(false);
         AUIManager.Instance.CloseUI<UIInGame>();
-        AUIManager.Instance.OpenUI<PopupMapUI>();
     }
 
     public void ClearAllMap()
@@ -91,5 +92,12 @@ public class GameManager : Singleton<GameManager>
         CellManager.Instance.ClearMap();
         EnemyManager.Instance.ClearEnemy();
         TeamManager.Instance.ClearTeam();
+    }
+    public void OnReplay(){
+        if (dataModel != null){
+            CreateMap(dataModel.mapTree, dataModel.mapID);
+        }else{
+            CreateMap(0, 0);
+        }
     }
 }
