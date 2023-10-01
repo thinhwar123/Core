@@ -45,7 +45,7 @@ public class EnemyManager : Singleton<EnemyManager>
         for (var i = 0; i < newEnemies.Count; i++)
         {
             Enemies[i].PlayTurn();
-            await UniTask.WaitUntil(() => !Enemies[i].IsTakeTurn);
+            await UniTask.WaitUntil(() => (i>-1&&i<Enemies.Count?!Enemies[i].IsTakeTurn:true));
         }
         GameManager.Instance.SetGameState(GameManager.GameState.PlayerTurn);
     }

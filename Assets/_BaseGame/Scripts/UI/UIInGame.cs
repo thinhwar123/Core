@@ -36,6 +36,7 @@ public class UIInGame : AUIPanel
         GameManager.Instance.SetGameState(GameManager.GameState.SelectLevel);
         GameManager.Instance. ClearAllMap();
         AUIManager.Instance.CloseUI<UIInGame>();
+        AUIManager.Instance.CloseUI<UIResult>();
         AUIManager.Instance.OpenUI<PopupMapUI>();
     }
 }
