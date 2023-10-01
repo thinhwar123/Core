@@ -185,7 +185,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 197125361}
-  - component: {fileID: 197125362}
   m_Layer: 0
   m_Name: UIInGameContainer
   m_TagString: Untagged
@@ -215,25 +214,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &197125362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197125360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f59c1014f10c43845896af5a2d3852a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Colors>k__BackingField: []
-  <ImageAttributeType>k__BackingField: {fileID: 0}
-  <ProcessBar>k__BackingField: {fileID: 0}
-  <Offset>k__BackingField: {x: 0, y: 0, z: 0}
-  <Target>k__BackingField: {fileID: 0}
-  <ImageFill>k__BackingField: {fileID: 0}
-  <EnemyColor>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &233710898
 GameObject:
   m_ObjectHideFlags: 0

@@ -485,7 +485,7 @@ MonoBehaviour:
     type: 2}
   <RectTransform>k__BackingField: {fileID: 1646957601702035339}
   <MainButton>k__BackingField: {fileID: 1646957600327059597}
-  <TextPreset>k__BackingField: UI
+  <TextPreset>k__BackingField: UISize
 --- !u!1 &5010020986006274104
 GameObject:
   m_ObjectHideFlags: 0
