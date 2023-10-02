@@ -36,10 +36,11 @@ public class UIResult : AUIPanel
     private void OnClickHomeButton()
     {
         // TODO: Open Home Panel
-        //GameManager.Instance.SetGameState(GameManager.GameState.SelectLevel);
+        AudioManager.Instance.ChangeMusic(AudioType.BgmLevelSelect, 1);
+        GameManager.Instance.SetGameState(GameManager.GameState.SelectLevel);
+        GameManager.Instance. ClearAllMap();
         AUIManager.Instance.CloseUI<UIInGame>();
         AUIManager.Instance.CloseUI<UIResult>();
-        GameManager.Instance.ClearAllMap();
-        AUIManager.Instance.OpenUI<BaseGame.PopupMapUI>();
+        AUIManager.Instance.OpenUI<PopupMapUI>();
     }
 }

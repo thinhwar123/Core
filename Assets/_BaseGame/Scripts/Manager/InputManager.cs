@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using TW.Utility.DesignPattern;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -83,8 +84,9 @@ public class InputManager : Singleton<InputManager>
             CellManager.Instance.NormalAllCell();
             if (CellList.Count > 1)
             {
-                TeamManager.Instance.TeamMoveFollowPath(CellList);
+                TeamManager.Instance.TeamMoveFollowPath(CellList.ToList());
             }
+            CellList.Clear();
             ClearLink();
         }
     }
